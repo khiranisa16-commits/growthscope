@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", initial-scale="1.0">
+
+        <meta
+        name="description"
+        content="GrowthScope helps marketers understand their funnel metrics and identify opportunities for growth"
+        >
+
+        <title>GrowthScope | Marketing Funnel Analytics</title>
+
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+
+    <body>
+        <header class="site-header">
+            <a href="index.html" class="logo">GrowthScope</a>
+            <nav aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#how-it-works">How it works</a></li>
+                    <li><a href="#analysis">Start analysing</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero" id="about">
+                <div class="hero-content">
+                    <h1>See where your marketing funnel is leaking</h1>
+                    <p>Enter your data, understand your metrics and find opportunities</p>
+
+                    <a href="#analysis" class="button">Start analysing</a>
+                </div>
+
+                <div class="hero-visual" aria-hidden="true"></div>
+            </section>
+
+            <section class="how-it-works" id="how-it-works">
+                <h2>How it works</h2>
+
+                <div class="steps">
+                    <article class="step-card">
+                        <span class="step-number">1</span>
+                        <h3>Add your data</h3>
+                        <p>Enter your marketing metrics you already have.</p>
+                    </article>
+
+                    <article class="step-card">
+                        <span class="step-number">3</span>
+                        <h3>Find opportunities</h3>
+                        <p>Analyse your funnel and test what could improve.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="analysis-section" id="analysis">
+                <div class="analysis-card">
+                    <div class="progress">
+                        <p>Step 1 of 4</p>
+
+                        <ol class="progress-list">
+                            <li aria-current="step">Your setup</li>
+                            <li>Funnel data</li>
+                            <li>Review</li>
+                            <li>Results</li>
+                        </ol>
+                    </div>
+
+                    <h2>Let's tailor your experiences</h2>
+                    <p>Tell us a bit about you so we can show the right level of guidance.</p>
+
+                    <form id="setup-form">
+                        <fieldset>
+                            <legend>How familiar are you with marketing metrics</legend>
+                            <p>This only changes how much guidance GrowthScope shows you.</p>
+
+                            <div class="experiences-options">
+
+                                <label class="option-card">
+                                    <input
+                                    type="radio"
+                                    name="experience"
+                                    value="beginner"
+                                    required
+                                    >
+
+                                    <span>
+                                        <strong>New to this</strong>
+                                        Explain metrics in plain English and show me where to find them.
+                                    </span>
+                                </label>
+
+                                <label class="option-card">
+                                    <input 
+                                    type="radio"
+                                    name="experience"
+                                    value="comfortable"
+                                    >
+
+                                    <span>
+                                        <strong>Comfortable</strong>
+                                        Show explanations when I ask for them.
+                                    </span>
+                                </label>
+
+                                <label class="option-card">
+                                    <input
+                                    type="radio"
+                                    name="experience"
+                                    value="experienced"
+                                    >
+
+                                    <span>
+                                        <strong>Experienced</strong>
+                                        Keep guidance minimal and get me to the analysis quickly.
+                                    </span>
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Which tools do you use?</legend>
+
+                                <p>
+                                    Select all that apply. This helps GrowthScope show you where to find your data.
+                                </p>
+
+                                <div class="tool-options">
+                                    <label>
+                                        <input type="checkbox" name="tools" value="google-ads">
+                                        Google Ads
+                                    </label>
+
+                                    <label>
+                                        <input type="checkbox" name="tools" value="meta-ads">
+                                        Meta Ads
+                                    </label>
+
+                                    <label>
+                                        <input type="checkbox" name="tools" value="linkedin-ads">
+                                        LinkedIn Ads
+                                    </label>
+
+                                    <label>
+                            <input type="checkbox" name="tools" value="ga4">
+                            GA4
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="tools" value="hubspot">
+                            HubSpot
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="tools" value="salesforce">
+                            Salesforce
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="tools" value="other">
+                            Other
+                        </label>
+
+                        <label>
+                            <input type="checkbox" name="tools" value="not-sure">
+                            Not sure
+                        </label>
+                    </div>
+                </fieldset>
+
+                    <p class="form-note">
+                        Not sure? You can change these settings later.
+                    </p>
+
+                    <button type="submit" class="button">
+                        Continue
+                    </button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="footer-content">
+                <p class="footer-logo">GrowthScope</p>
+
+                <nav aria-label="Footer navigation">
+                    <ul class="footer-links">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <p>&copy; 2026 GrowthScope. All rights reserved.</p>
+            </div>
+        </footer>
+        <script src="assets/js/script.js"></script>
+    </body>
+
+</html>
