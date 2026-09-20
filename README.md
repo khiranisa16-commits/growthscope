@@ -35,3 +35,70 @@ GrowthScope aims to make funnel analysis easier to understand by combining educa
 - Funnel-stage diagnostic guidance
 - Scenario modelling
 - Reset and start-again functionality
+
+## UX Design
+
+GrowthScope was designed to make marketing funnel analysis accessible to both experienced marketers and people who are less familiar with marketing metrics.
+
+The user journey is split into four main stages:
+
+1. Set up the level of guidance required
+2. Enter available funnel data
+3. Review and validate the data
+4. Analyse results and explore opportunities for improvement
+
+The application was wireframed before development to plan the layout, interaction flow and responsive behaviour.
+
+### Desktop wireframes
+
+#### User setup
+
+![GrowthScope desktop setup wireframe](documentation/wireframes/Desktop%20Wireframe.png)
+
+#### Traffic and acquisition data
+
+![GrowthScope traffic and acquisition wireframe](documentation/wireframes/Desktop%20Wireframe%20-%20Funnel%20Data.png)
+
+#### Leads and qualification data
+
+![GrowthScope leads and qualification wireframe](documentation/wireframes/Desktop%20Wireframe%20-%20Funnel%20Data%20%281%29.png)
+
+#### Review
+
+![GrowthScope review wireframe](documentation/wireframes/Desktop%20Wireframe%20-%20Funnel%20Data%20%282%29.png)
+
+#### Results
+
+![GrowthScope results wireframe](documentation/wireframes/Desktop%20Wireframe%20-%20Funnel%20Data%20%283%29.png)
+
+#### Opportunities and scenario planning
+
+![GrowthScope opportunities wireframe](documentation/wireframes/Desktop%20Wireframe%20-%20Opportunities.png)
+
+### Responsive design
+
+The interface was also planned for tablet and mobile devices. On smaller screens, multi-column layouts are reduced or stacked vertically to maintain readability and usability.
+
+#### Tablet setup
+
+![GrowthScope tablet setup wireframe](documentation/wireframes/Tablet%20Wireframe%20-%20Setup.png)
+
+#### Tablet funnel data
+
+![GrowthScope tablet funnel data wireframe](documentation/wireframes/Tablet%20Wireframe%20-%20Funnel%20Data.png)
+
+#### Tablet results
+
+![GrowthScope tablet results wireframe](documentation/wireframes/Tablet%20Wireframe%20-%20Results.png)
+
+#### Mobile setup
+
+![GrowthScope mobile setup wireframe](documentation/wireframes/Mobile%20Wireframe%20-%20Setup.png)
+
+#### Mobile funnel data
+
+![GrowthScope mobile funnel data wireframe](documentation/wireframes/Mobile%20Wireframe%20-%20Funnel%20Data.png)
+
+#### Mobile results
+
+![GrowthScope mobile results wireframe](documentation/wireframes/Mobile%20Wireframe%20-%20Results.png)
