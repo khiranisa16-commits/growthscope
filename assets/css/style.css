@@ -111,3 +111,45 @@ button {
     border-radius: 1rem;
     background-color: #e5e7eb;
 }
+
+.how-it-works {
+    padding: 4rem 2rem;
+    background-color: #f8fafc;
+}
+
+.how-it-works h2 {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    background-color: #2563eb;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.step-card h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.step-card p {
+    margin: 0;
+}
