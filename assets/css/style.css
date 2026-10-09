@@ -56,7 +56,7 @@ button {
     display: flex;
     gap: 1.5rem;
     margin: 0;
-    padding: auto;
+    padding: 0;
     list-style: none;
 }
 
@@ -71,7 +71,8 @@ button {
 
 .hero {
     display: grid;
-    grid-template-columns: center;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
     gap: 3rem;
     max-width: 1200px;
     margin: 0 auto;
@@ -132,6 +133,13 @@ button {
     margin: 0 auto;
 }
 
+.step-card {
+    padding: 2rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    background-color: #ffffff;
+}
+
 .step-number {
     display: inline-flex;
     align-items: center;
@@ -162,7 +170,7 @@ button {
     max-width: 900px;
     margin: 0 auto;
     padding: 2rem;
-    border: 1 px solid #e5e7eb;
+    border: 1px solid #e5e7eb;
     border-radius: 1rem;
     background-color: #ffffff;
 }
