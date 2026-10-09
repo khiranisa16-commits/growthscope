@@ -318,3 +318,73 @@ legend {
     color: #475569;
     font-size: 0.9rem;
 }
+
+/* Tablet */
+@media (max-width: 900px) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-visual {
+        min-height: 280px;
+    }
+
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .nav-list {
+        flex-wrap: wrap;
+        gap: 0.75rem 1rem;
+    }
+
+    .hero {
+        gap: 2rem;
+        padding: 3rem 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .how-it-works,
+    .analysis-section {
+        padding: 3rem 1rem;
+    }
+
+    .analysis-card {
+        padding: 1.25rem;
+    }
+
+    .progress-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .tool-options {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        gap: 0.75rem 1rem;
+    }
+
+    .site-footer {
+        padding: 2rem 1rem;
+    }
+}
