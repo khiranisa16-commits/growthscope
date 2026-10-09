@@ -319,6 +319,16 @@ legend {
     font-size: 0.9rem;
 }
 
+.metric-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.metric-field label {
+    font-weight: 700;
+}
+
 /* Tablet */
 @media (max-width: 900px) {
     .hero {
@@ -386,5 +396,9 @@ legend {
 
     .site-footer {
         padding: 2rem 1rem;
+    }
+
+    .metric-fields {
+    grid-template-columns: 1fr;
     }
 }
