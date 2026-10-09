@@ -187,6 +187,87 @@
                     </form>
                 </div>
             </section>
+
+            <section class="analysis-section" id="funel-step" hidden>
+                <div class="analysis-card">
+
+                    <div class="progress">
+                        <p>Step 2 of 4</p>
+
+                        <ol class="progress-list">
+                            <li>Your setup</li>
+                            <li aria-current="step">Funnel data</li>
+                            <li>Review</li>
+                            <li>Results</li>
+                        </ol>
+                    </div>
+
+                    <h2>Enter your funnel data</h2>
+                    <p>
+                        Add what you know. You can leave anything blank if you do not have the data.
+                    </p>
+
+                    <form id="funnel-form">
+                        <fieldset>
+                            <legend> Traffic and acquisition</legend>
+
+                            <p>
+                                These metrics help show how people discovered and visited your content.
+                            </p>
+
+                            <div class="metric-fields">
+
+                                <div class="metric-field">
+                                    <label for="spend">Spend (£)</label>
+                                    <input
+                                        type="number"
+                                        id="spend"
+                                        name="spend"
+                                        min="0"
+                                        step="0.01"
+                                        >
+                                </div>
+
+                                <div class="metric-field">
+                                    <label for="impression">Impressions</label>
+                                    <input
+                                        type="number"
+                                        id="impressions"
+                                        name="impressions"
+                                        min="0"
+                                        >
+                                </div>
+
+                                <div class="metric-field">
+                                    <label for="clicks">Clicks</label>
+                                    <input
+                                        type="number"
+                                        id="clicks"
+                                        name="clicks"
+                                        min="0"
+                                        >
+                                </div>
+
+                                <div class="metric-field">
+                                    <label for="visits">Website visits</label>
+                                    <input
+                                        type="number"
+                                        id="visits"
+                                        name="visits"
+                                        min="0"
+                                        >
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <button type="submit" class="button">
+                            Continue
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+
         </main>
 
         <footer class="site-footer">
