@@ -24,7 +24,7 @@ setupForm.addEventListener("submit", function (event) {
     });  
 });
 
-backToSetupButton.addEventListener("click", function(){
+backToSetupButton.addEventListener("click", function() {
     funnelStep.hidden = true;
     setupStep.hidden = false;
 
@@ -53,9 +53,9 @@ function showReviewValue(id, value, isCurrency = false) {
     }
 
     if (isCurrency) {
-        reviewElement.textContent = `£${value.toLocalleString()}`;
+        reviewElement.textContent = `£${value.toLocaleString()}`;
     } else {
-        reviewElement.textContent = value.toLocalleString();
+        reviewElement.textContent = value.toLocaleString();
     }
     }
 
@@ -84,11 +84,17 @@ function showReviewValue(id, value, isCurrency = false) {
             revenue
         ];
 
-        const hasData = value.some(function (value)
+        const hasData = values.some(function (value)
         { return value !== null;
     });
 
     if (!hasData) {
+        funnelFeedback.textContent = 
+        "Enter at least one funnel metric before continuing.";
+        return;
+    }
+
+
         funnelFeedback.textContent = "";
         showReviewValue("review-spend", spend, true);
         showReviewValue("review-impressions", impressions);
@@ -114,7 +120,7 @@ function showReviewValue(id, value, isCurrency = false) {
             mqls !== null &&
             mqls > leads
         ) {
-            warnings.push("MQLs are higher thann leads.");
+            warnings.push("MQLs are higher than leads.");
         }
 
         if (
@@ -147,7 +153,7 @@ function showReviewValue(id, value, isCurrency = false) {
     });
 });
 
-backToFunnelButton.addEventListener("click", fucntion () {
+backToFunnelButton.addEventListener("click", function () {
     reviewStep.hidden = true;
     funnelStep.hidden = false;
 
