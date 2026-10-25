@@ -214,3 +214,44 @@ backToFunnelButton.addEventListener("click", function () {
         block: "start"
 });
 });
+
+analyseFunnelButton.addEventListener("click", function () {
+    const spend = getInputValue("spend");
+    const impressions = getInputValue("impressions");
+    const clicks = getInputValue("clicks");
+    const leads = getInputValue("leads");
+    const mqls = getInputValue("customers");
+    const revenue = getInputValue("revenue");
+
+    const ctr = calculatePercentage(clicks, impressions);
+    const cpc = calculateCost(spend, clicks);
+    const cpl = calculateCost(spend, leads);
+    const leadtoMql = calculatePercentage(mqls, leads);
+    const cac = calculateCost(spend, customers);
+    const roas = calculateCost(revenue, spend);
+
+    showResult("result-ctr", ctr, "percentage");
+    showResult("result-cpc", cpc, currency); 
+    showResult("result-cpl", cpl, "currency");
+    showResult("result-lead-mql", leadToMql, "percentage");
+    showResult("result-cac", cac, "currency");
+    shpwResut("result-roas", roas, "ratio");
+
+    reviewStep.hidden = true;
+    resultsStep.hidden = false;
+
+    resultsStep.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+});
+
+backToReviewButton.addEventListener("click", function () {
+    resultsStep.hidden = true;
+    reviewStep.hidden = false;
+
+    reviewStep.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+});
