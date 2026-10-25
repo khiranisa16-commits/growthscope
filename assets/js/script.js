@@ -12,6 +12,11 @@ const backToFunnelButton = document.getElementById("back-to-funnel");
 const funnelFeedback = document.getElementById("funnel-feedback");
 const dataCheck = document.getElementById("data-check");
 
+const resultsStep = document.getElementById("results-step");
+
+const analyseFunnelButton = document.getElementById("analyse-funnel");
+const backToReviewButton = document.getElementById("back-to-review");
+
 setupForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
@@ -58,6 +63,49 @@ function showReviewValue(id, value, isCurrency = false) {
         reviewElement.textContent = value.toLocaleString();
     }
     }
+
+    function calculatePercentage(part, total) {
+        if (
+            part === null ||
+            total === null ||
+            total === 0
+        ) {
+            return null;
+        }
+
+        return (part / total) * 100;
+    }
+
+    function calculateCost(cost, result) {
+        if (
+            cost === null ||
+            result === null ||
+            result === 0
+        ) {
+            return null;
+        }
+        return cost / result;
+    }
+
+    function showResult(id, value, format = "number") {
+        const resultElement = document.getElementById(id);
+
+        if (value === null) {
+            resultElement.textContent = "Not available";
+            return;
+        }
+
+        if (format === "percentage") {
+            resultElement.textContent = `${value.toFixed(1)}`;
+        } else if (format === "currency") {
+            resultElement.textContent = `${value.toFixed(2)}`;
+        } else if (format === "ratio") {
+            resultElement.textContent = `${value.toFixed(2)}x`;
+        } else {
+            resultElement.textContent = value.toFixed(2);
+        }
+    }
+
 
     funnelForm.addEventListener("submit", function (event) {
         event.preventDefault();
