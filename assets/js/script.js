@@ -141,8 +141,12 @@ function showReviewValue(id, value, isCurrency = false) {
 
         if (warnings.length > 0) {
             dataCheck.textContent = 
+            `Check your data: ${warning.join(" ")}`;
+        } else {
+            dataCheck.textContent = 
             "Your data is ready to analyse.";
         }
+        
 
         funnelStep.hidden = true;
         reviewStep.hidden = false;
