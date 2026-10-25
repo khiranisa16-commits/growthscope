@@ -96,7 +96,7 @@ function showReviewValue(id, value, isCurrency = false) {
         }
 
         if (format === "percentage") {
-            resultElement.textContent = `${value.toFixed(1)}`;
+            resultElement.textContent = `${value.toFixed(1)}`%;
         } else if (format === "currency") {
             resultElement.textContent = `${value.toFixed(2)}`;
         } else if (format === "ratio") {
