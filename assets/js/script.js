@@ -236,7 +236,7 @@ analyseFunnelButton.addEventListener("click", function () {
     showResult("result-cpl", cpl, "currency");
     showResult("result-lead-mql", leadToMql, "percentage");
     showResult("result-cac", cac, "currency");
-    showResut("result-roas", roas, "ratio");
+    showResult("result-roas", roas, "ratio");
 
     reviewStep.hidden = true;
     resultsStep.hidden = false;
