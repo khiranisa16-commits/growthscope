@@ -96,11 +96,11 @@ function showReviewValue(id, value, isCurrency = false) {
         }
 
         if (format === "percentage") {
-            resultElement.textContent = `${value.toFixed(1)}`%;
+            resultElement.textContent = `${value.toFixed(1)}%`;
         } else if (format === "currency") {
-            resultElement.textContent = `${value.toFixed(2)}`;
+            resultElement.textContent = `£${value.toFixed(2)}`;
         } else if (format === "ratio") {
-            resultElement.textContent = `${value.toFixed(2)}x`;
+            resultElement.textContent = `${value.toFixed(2)}×`;
         } else {
             resultElement.textContent = value.toFixed(2);
         }
@@ -220,22 +220,23 @@ analyseFunnelButton.addEventListener("click", function () {
     const impressions = getInputValue("impressions");
     const clicks = getInputValue("clicks");
     const leads = getInputValue("leads");
-    const mqls = getInputValue("customers");
+    const mqls = getInputValue("mqls");
+    const customers = getInputValue("customers");
     const revenue = getInputValue("revenue");
 
     const ctr = calculatePercentage(clicks, impressions);
     const cpc = calculateCost(spend, clicks);
     const cpl = calculateCost(spend, leads);
-    const leadtoMql = calculatePercentage(mqls, leads);
+    const leadToMql = calculatePercentage(mqls, leads);
     const cac = calculateCost(spend, customers);
     const roas = calculateCost(revenue, spend);
 
     showResult("result-ctr", ctr, "percentage");
-    showResult("result-cpc", cpc, currency); 
+    showResult("result-cpc", cpc, "currency"); 
     showResult("result-cpl", cpl, "currency");
     showResult("result-lead-mql", leadToMql, "percentage");
     showResult("result-cac", cac, "currency");
-    shpwResut("result-roas", roas, "ratio");
+    showResut("result-roas", roas, "ratio");
 
     reviewStep.hidden = true;
     resultsStep.hidden = false;
