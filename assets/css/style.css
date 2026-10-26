@@ -173,7 +173,8 @@ button {
 }
 
 .hero-visual img {
-    width: 100%;
+    width: 118%;
+    max-width: none;
     height: auto;
     display: block;
 }
@@ -440,6 +441,10 @@ legend {
 
     .hero-visual {
         min-height: 280px;
+    }
+
+    .hero-visual img {
+        width: 100%;
     }
 
     .steps {
