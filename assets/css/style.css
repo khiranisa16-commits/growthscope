@@ -329,11 +329,18 @@ legend {
     font-weight: 700;
 }
 
-.result-grid {
+.results-grid {
     display: grid;
-    grid-template-columns: repeat(3. 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     margin: 2rem 0;
+}
+
+.result-card {
+    padding: 1.25rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.75rem;
+    background-color: #f9fafb;
 }
 
 .result-card p {
