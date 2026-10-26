@@ -271,12 +271,13 @@ button {
 .progress-list li {
     padding: 0.75rem;
     border-radius: 0.5rem;
-    background-color: #f1f5f9;
+    background-color: var(--lilac);
     text-align: center;
+    border: 1px solid var(--border);
 }
 
 .progress-list li[aria-current="step"] {
-    background-color: #2563eb;
+    background-color: var(--violet);
     color: #ffffff;
     font-weight: 700;
 }
