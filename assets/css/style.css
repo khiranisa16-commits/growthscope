@@ -26,12 +26,13 @@ body {
     line-height: 1.6;
     color: var(--navy);
     background-color: var(--cream);
-    h1, 
+}
+
+h1, 
     h2, 
     h3 {
         letter-spacing: -0.03rem;
     }
-}
 
 img {
     max-width: 100%;
