@@ -28,16 +28,7 @@ setupForm.addEventListener("submit", function (event) {
 
     beginnerGuidance.hidden = selectedExperience.value !== "beginner";
 
-    setupStep.hidden = true;
-    funnelStep.hidden = false;
-
-    funnelStep.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-    });  
-});
-
-const selectedTools = document.querySelectorAll(
+    const selectedTools = document.querySelectorAll(
     'input[name="tools"]:checked'
 );
 
@@ -49,11 +40,22 @@ const toolGuidance = document.getElementById("tool-guidance");
 
 if (toolNames.length > 0) {
     toolGuidance.textContent = 
-    `You selected: ${toolNames.join(",")}.`;
-    toolGuidance.hidden = false
+    `You selected: ${toolNames.join(", ")}.`;
+    toolGuidance.hidden = false;
 } else {
     toolGuidance.hidden = true;
 }
+
+
+    setupStep.hidden = true;
+    funnelStep.hidden = false;
+
+    funnelStep.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });  
+});
+
 
 backToSetupButton.addEventListener("click", function() {
     funnelStep.hidden = true;
