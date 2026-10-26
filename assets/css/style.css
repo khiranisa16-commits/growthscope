@@ -337,6 +337,91 @@ legend {
     margin-bottom: 0.25rem;
 }
 
+.setup-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(260px, 0.08fr);
+    gap: 2rem;
+    align-items: start;
+    margin-top: 2rem;
+}
+
+.setup-main {
+    min-width: 0;
+}
+
+.experience-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.option-card {
+    min-height: 150px;
+    padding: 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    background: var(--card);
+    align-items: flex-start;
+}
+
+.tool-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+}
+
+.tool-options label {
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 0.8rem;
+    background: var(--card);
+}
+
+.setup-guidance {
+    padding: 1.75rem;
+    border-radius: 1.25rem;
+    background: linear-gradient(
+        145deg,
+        #f5f3ff 0%,
+        #fff1ed 100%
+    );
+}
+
+.guidance-badge { 
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-bottom: 1rem;
+    border-radius: 0.75rem;
+    background: var(--violet);
+    color: white;
+    font-size: 1.2rem;
+}
+
+.setup-guidance h3 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+.guidance-item {
+    display: grid;
+    gap: 0.15rem;
+    margin-top: 1.25rem;
+}
+
+.guidance-item span {
+    color: var(--muted-text);
+    font-size: 0.9rem;
+}
+
+.setup-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2rem;
+}
+
 .tool-options {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
