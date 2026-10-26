@@ -192,6 +192,41 @@ button {
     font-weight: 700;
 }
 
+.hero-funnel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 55%;
+    transform: translate(-50%, -45%);
+}
+
+.hero-funnel span {
+    display: block;
+    height: 2rem;
+    margin: 0.35rem auto;
+    border-radius: 0.35rem;
+}
+
+.hero-funnel span:nth-child(1) {
+    width: 100%;
+    background-color: var(--violet);
+}
+
+.hero-funnel span:nth-child(2) {
+    width: 78%;
+    background-color: var(--coral);
+}
+
+.hero-funnel span:nth-child(3) {
+    width: 56%;
+    background-color: var(--yellow);
+}
+
+.hero-funnel span:nth-child(4) {
+    width: 34%;
+    background-color: var(--mint);
+}
+
 .how-it-works {
     padding: 4rem 2rem;
     background-color: #f8fafc;
