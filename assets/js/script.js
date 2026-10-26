@@ -37,6 +37,24 @@ setupForm.addEventListener("submit", function (event) {
     });  
 });
 
+const selectedTools = document.querySelectorAll(
+    'input[name="tools"]:checked'
+);
+
+const toolNames = Array.from(selectedTools).map(function(tool) {
+    return tool.parentElement.textContent.trim();
+});
+
+const toolGuidance = document.getElementById("tool-guidance");
+
+if (toolNames.length > 0) {
+    toolGuidance.textContent = 
+    `You selected: ${toolNames.join(",")}.`;
+    toolGuidance.hidden = false
+} else {
+    toolGuidance.hidden = true;
+}
+
 backToSetupButton.addEventListener("click", function() {
     funnelStep.hidden = true;
     setupStep.hidden = false;
