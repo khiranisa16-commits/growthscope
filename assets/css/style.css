@@ -1,3 +1,17 @@
+:root { 
+    --navy: #111827;
+    --violet: #6d28d9;
+    --violet-dark: #5b21b6;
+    --coral: #f97360;
+    --mint: #2dd4bf;
+    --yellow: #fbbf24;
+    --cream: #fff9f5;
+    --lilac: #f5f3ff;
+    --card: #ffffff;
+    --border: #e7e5e4;
+    --muted-text: #64748b;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -10,8 +24,8 @@ body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
-    color: #1f2937;
-    background-color: #ffffff;
+    color: var(--navy);
+    background-color: var(--cream);
 }
 
 img {
@@ -98,13 +112,13 @@ button {
     border: 0;
     border-radius: 0.5rem;
     background-color: #2563eb;
-    color: #ffffff;
+    color: var(--violet);
     font-weight: 700;
     text-decoration: none;
 }
 
 .button:hover {
-    background-color: #1d4ed8;
+    background-color: var(--violet-dark);
 }
 
 .hero-visual {
