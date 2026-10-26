@@ -135,6 +135,16 @@ button {
     line-height: 1.1;
 }
 
+.gradient-text {
+        background: linear-gradient(
+            90deg,
+            var(--violet),
+            var(--coral)
+        );
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
 .hero-content p {
     max-width: 600px;
     margin-bottom: 2rem;
