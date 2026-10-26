@@ -181,7 +181,7 @@ button {
 
 .how-it-works {
     padding: 4rem 2rem;
-    background-color: #f8fafc;
+    background-color: var(--lilac);
 }
 
 .how-it-works h2 {
@@ -204,6 +204,7 @@ button {
     border: 1px solid #e5e7eb;
     border-radius: 0.75rem;
     background-color: #ffffff;
+    box-shadow: 0 10px 30px rgba(17, 25, 39, 0.06);
 }
 
 .step-number {
@@ -214,9 +215,17 @@ button {
     height: 2rem;
     margin-bottom: 1rem;
     border-radius: 50%;
-    background-color: #2563eb;
+    background-color: var(--violet);
     color: #ffffff;
     font-weight: 700;
+}
+
+.step-card:nth-child(2) .step-number {
+    background-color: var(--coral);
+}
+
+.step-card:nth-child(3) .step-number {
+    background-color: var(--mint);
 }
 
 .step-card h3 {
