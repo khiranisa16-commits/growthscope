@@ -19,6 +19,8 @@ const backToReviewButton = document.getElementById("back-to-review");
 
 const beginnerGuidance = document.getElementById("beginner-guidance");
 
+const funnelInsight = document.getElementById("funnel-insight");
+
 setupForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
@@ -266,6 +268,19 @@ analyseFunnelButton.addEventListener("click", function () {
     showResult("result-cac", cac, "currency");
     showResult("result-roas", roas, "ratio");
 
+    if (ctr !== null && ctr < 1) {
+        funnelInsight.textContent = 
+        "Your click-through rate is low. Improving ad relevance or creative could help drive more traffic.";
+    } else if (leadToMql !== null && leadToMql < 30) {
+        funnelInsight.textContent =
+        "Lead qualification looks like a possible bottleneck. Review lead quality and qualification criteria.";
+    } else if (roas !== null && roas < 2) {
+        funnelInsight.textContent = 
+        "Your return on ad spend is relatively low. Review campaign costs and conversion performance.";
+    } else {
+        funnelInsight.textContent = 
+        "No major issue stands out from the available data. Review each stage for smaller optimisation opportunities.";
+    }
     reviewStep.hidden = true;
     resultsStep.hidden = false;
 
