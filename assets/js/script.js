@@ -17,8 +17,16 @@ const resultsStep = document.getElementById("results-step");
 const analyseFunnelButton = document.getElementById("analyse-funnel");
 const backToReviewButton = document.getElementById("back-to-review");
 
+const beginnerGuidance = document.getElementById("beginner-guidance");
+
 setupForm.addEventListener("submit", function (event) {
     event.preventDefault();
+
+    const selectedExperience = document.querySelector(
+    'input[name="experience"]:checked'
+    );
+
+    beginnerGuidance.hidden = selectedExperience.value !== "beginner";
 
     setupStep.hidden = true;
     funnelStep.hidden = false;
