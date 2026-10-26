@@ -318,11 +318,18 @@ legend {
 }
 
 .option-card:hover {
-    border-color: #2563eb;
+    border-color: var(--violet);
+}
+
+.option-card:has(input:checked) {
+    border-color: var(--violet);
+    background-color: var(--lilac);
+    box-shadow: 0 0 0 1px var(--violet);
 }
 
 .option-card input {
     margin-top: 0.35rem;
+    accent-color: var(--violet);
 }
 
 .option-card strong {
