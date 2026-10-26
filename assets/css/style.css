@@ -349,6 +349,24 @@ legend {
     font-weight: 700;
 }
 
+.review-group {
+    margin-bottom: 2rem;
+}
+
+.review-group dl {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 1rem 0 0;
+}
+
+.review-group dl div {
+    padding: 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    background-color: #f9fafb;
+}
+
 /* Tablet */
 @media (max-width: 900px) {
     .hero {
@@ -427,6 +445,10 @@ legend {
     }
 
     .results-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .review-group dl {
         grid-template-columns: 1fr;
     }
 }
