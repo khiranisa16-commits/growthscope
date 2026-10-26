@@ -367,6 +367,10 @@ legend {
         flex-direction: column;
         align-items: flex-start;
     }
+
+    .results-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* Mobile */
@@ -420,5 +424,9 @@ legend {
 
     .metric-fields {
     grid-template-columns: 1fr;
+    }
+
+    .results-grid {
+        grid-template-columns: 1fr;
     }
 }
