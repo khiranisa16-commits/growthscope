@@ -339,7 +339,7 @@ legend {
 
 .setup-layout {
     display: grid;
-    grid-template-columns: minmax(0, 2fr) minmax(260px, 0.08fr);
+    grid-template-columns: minmax(0, 2fr) minmax(260px, 0.8fr);
     gap: 2rem;
     align-items: start;
     margin-top: 2rem;
@@ -371,10 +371,14 @@ legend {
 }
 
 .tool-options label {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
     padding: 0.9rem 1rem;
     border: 1px solid var(--border);
     border-radius: 0.8rem;
     background: var(--card);
+    cursor: pointer;
 }
 
 .setup-guidance {
@@ -420,23 +424,6 @@ legend {
     display: flex;
     justify-content: flex-end;
     margin-top: 2rem;
-}
-
-.tool-options {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem;
-    margin-top: 1rem;
-}
-
-.tool-options label {
-    display: flex;
-    gap: 0.75rem;
-    align-items: center;
-    padding: 0.75rem;
-    border: 1px solid #d1d5db;
-    border-radius: 0.5rem;
-    cursor: pointer;
 }
 
 .form-note {
