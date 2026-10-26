@@ -329,6 +329,19 @@ legend {
     font-weight: 700;
 }
 
+.result-grid {
+    display: grid;
+    grid-template-columns: repeat(3. 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.result-card p {
+    margin-bottom: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
 /* Tablet */
 @media (max-width: 900px) {
     .hero {
