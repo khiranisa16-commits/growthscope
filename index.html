@@ -88,6 +88,8 @@
                     <p>Tell us a bit about you so we can show the right level of guidance.</p>
 
                     <form id="setup-form">
+                        <div class="setup-layout">
+                            <div class="setup-main">
                         <fieldset>
                             <legend>How familiar are you with marketing metrics?</legend>
                             <p>This only changes how much guidance GrowthScope shows you.</p>
@@ -189,10 +191,37 @@
                     <p class="form-note">
                         Not sure? You can change these settings later.
                     </p>
+                    </div>
+                    <aside class="setup-guidance" aria-labelledby="guidance-title">
+                        <div class="guidance-badge" aria-hidden="true">✦</div>
+                        <h3 id="guidance-title">Beginner guidance</h3>
 
-                    <button type="submit" class="button">
-                        Continue
-                    </button>
+                        <p>
+                            You'll get clear, plain English explanations, with help on where to find each metric in your tools.
+                        </p>
+
+                        <div class="guidance-item">
+                            <strong>Simple definitions</strong>
+                            <span>Understand what each metric means.</span>
+                        </div>
+
+                        <div class="guidance-item">
+                            <strong>Where to find your data</strong>
+                            <span>Recommendations in plain English.</span>
+                        </div>
+
+                        <div class="guidance-item">
+                            <strong>Tailored insights</strong>
+                            <span>Step by step guidance for the tools you use.</span>
+                        </div>
+                    </aside>
+                    </div>
+
+                    <div class="setup-actions">
+                        <button type="submit" class="button">
+                            Continue
+                        </button>
+                    </div>
                     </form>
                 </div>
             </section>
