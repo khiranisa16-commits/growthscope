@@ -96,7 +96,7 @@ button {
 }
 
 .nav-list li:last-child a:hover {
-    background-color: : var(var(--violet-dark);
+    background-color: var(--violet-dark);
     text-decoration: none;
 }
 
