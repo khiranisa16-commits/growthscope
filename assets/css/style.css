@@ -250,6 +250,11 @@ button {
     background-color: #ffffff;
 }
 
+#analysis .analysis-card {
+    max-width: 1200px;
+    padding: 2.5rem 3rem;
+}
+
 .progress {
     margin-bottom: 2rem;
 }
@@ -339,7 +344,7 @@ legend {
 
 .setup-layout {
     display: grid;
-    grid-template-columns: minmax(0, 2fr) minmax(260px, 0.8fr);
+    grid-template-columns: minmax(0, 2.2fr) minmax(300px, 0.9fr);
     gap: 2rem;
     align-items: start;
     margin-top: 2rem;
