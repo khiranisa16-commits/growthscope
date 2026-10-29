@@ -451,6 +451,16 @@ legend {
     color: var(--violet);
 }
 
+.comfortable-icon {
+    background: #f3f0ff;
+    color: #8b5cf6;
+}
+
+.experience-icon {
+    background: #fff1ed;
+    color: var(--coral);
+}
+
 .experience-options {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
