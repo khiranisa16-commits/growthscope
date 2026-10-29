@@ -381,15 +381,13 @@ legend {
 
 
 .option-card > span:not(.experience-icon) {
+    display: block;
     grid-column: 2;
     grid-row: 2;
     font-size: 0.9rem;
     line-height: 1.45;
     color: var(--muted-text);
-}
-
-.option-card span {
-    display: block;
+    
 }
 
 .option-card strong {
