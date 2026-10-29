@@ -363,7 +363,7 @@ legend {
     min-height: 170px;
     padding: 1.25rem;
     border: 1px solid var(--border);
-    border-radius: 1 rem;
+    border-radius: 1rem;
     background: var(--card);
     cursor: pointer;
     transition: border-color 0.2s ease,
@@ -401,11 +401,6 @@ legend {
     accent-color: var(--violet);
 }
 
-.option-card strong {
-    display: block;
-    margin-bottom: 0.25rem;
-}
-
 .setup-layout {
     display: grid;
     grid-template-columns: minmax(0, 2.2fr) minmax(300px, 0.9fr);
@@ -424,14 +419,6 @@ legend {
     gap: 1rem;
 }
 
-.option-card {
-    min-height: 150px;
-    padding: 1.25rem;
-    border: 1px solid var(--border);
-    border-radius: 1rem;
-    background: var(--card);
-    align-items: flex-start;
-}
 
 .tool-options {
     display: grid;
