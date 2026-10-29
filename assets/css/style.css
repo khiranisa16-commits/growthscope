@@ -356,27 +356,48 @@ legend {
 }
 
 .option-card {
+    position: relative;
     display: flex;
     gap: 1rem;
     align-items: flex-start;
-    padding: 1rem;
-    border: 1px solid #d1d5db;
-    border-radius: 0.75rem;
+    min-height: 170px;
+    padding: 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: 1 rem;
+    background: var(--card);
     cursor: pointer;
+    transition: border-color 0.2s ease,
+                background-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.option-card span {
+    display: block;
+}
+
+.option-card strong {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-size: 1rem;
 }
 
 .option-card:hover {
-    border-color: var(--violet);
+    border-color: #c4b5fd;
 }
 
 .option-card:has(input:checked) {
     border-color: var(--violet);
-    background-color: var(--lilac);
+    background: linear-gradient(
+        145deg,
+        #faf7ff,
+        #fffafd
+    );
     box-shadow: 0 0 0 1px var(--violet);
 }
 
 .option-card input {
-    margin-top: 0.35rem;
+    flex: 0 0 auto;
+    margin-top: 0.2rem;
     accent-color: var(--violet);
 }
 
