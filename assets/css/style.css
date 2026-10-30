@@ -503,6 +503,22 @@ legend {
     flex-shrink: 0;
 }
 
+
+.tool-generic-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--violet);
+    flex-shrink: 0;
+}
+
+.tool-generic-icon svg {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
 .tool-options label:hover {
     border-color: #c4b5fd;
 }
