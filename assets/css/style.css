@@ -349,6 +349,35 @@ legend {
     font-weight: 700;
 }
 
+.legend-with-icon {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+}
+
+.section-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 2.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.75rem;
+    background: #ede9fe;
+    color: var(--violet);
+    line-height: 0;
+}
+
+.section-icon svg {
+    display: block;
+    width: 1.35rem;
+    height: 1.35rem;
+}
+
+.tools-section-icon {
+    background: #f3e8ff;
+}
+
 .experience-options {
     display: grid;
     gap: 1rem;
