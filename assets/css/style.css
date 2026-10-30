@@ -503,18 +503,6 @@ legend {
     flex-shrink: 0;
 }
 
-.tool-logo-meta {
-    transform: scale(1.45);
-}
-
-.tool-logo-ga4 {
-    transform: scale(1.45);
-}
-
-.tool-logo-salesforce {
-    transform: scale(1.35);
-}
-
 .tool-options label:hover {
     border-color: #c4b5fd;
 }
