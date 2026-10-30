@@ -594,9 +594,19 @@ legend {
     color: #f59e0b;
 }
 
-.guidance-item span {
+.guidance-item div {
+    display: grid;
+    gap: 0.1rem;
+}
+
+.guidance-item strong {
+    display: block;
+}
+
+.guidance-item div span {
     color: var(--muted-text);
     font-size: 0.9rem;
+    line-height: 1.4;
 }
 
 .setup-actions {
