@@ -504,18 +504,15 @@ legend {
 }
 
 .tool-logo-meta {
-    width: 2rem;
-    height: 2rem;
+    transform: scale(1.45);
 }
 
 .tool-logo-ga4 {
-    width: 2rem;
-    height: 2rem;
+    transform: scale(1.45);
 }
 
 .tool-logo-salesforce {
-    width: 2rem;
-    height: 2rem;
+    transform: scale(1.35);
 }
 
 .tool-options label:hover {
