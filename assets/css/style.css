@@ -374,10 +374,6 @@ legend {
     height: 1.35rem;
 }
 
-.tools-section-icon {
-    background: #f3e8ff;
-}
-
 .experience-options {
     display: grid;
     gap: 1rem;
@@ -485,12 +481,12 @@ legend {
 
 .comfortable-icon {
     background: #f3f0ff;
-    color: #8b5cf6;
+    color: var(--violet);
 }
 
 .experienced-icon {
     background: #fff1ed;
-    color: var(--coral);
+    color: var(--violet);
 }
 
 .experience-options {
