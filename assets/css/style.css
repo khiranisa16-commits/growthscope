@@ -563,8 +563,35 @@ legend {
 
 .guidance-item {
     display: grid;
-    gap: 0.15rem;
+    grid-template-columns: 2.5rem 1fr;
+    gap: 0.9rem;
+    align-items: center;
     margin-top: 1.25rem;
+}
+
+.guidance-item-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.75rem;
+    font-size: 1.1rem;
+}
+
+.definitions-icon {
+    background: #ede9fe;
+    color: var(--violet);
+}
+
+.find-icon {
+    background: #e0f7ff;
+    color: #0ea5e9;
+}
+
+.insights-icon {
+    background: #fff3dc;
+    color: #f59e0b;
 }
 
 .guidance-item span {
