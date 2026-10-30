@@ -444,7 +444,7 @@ legend {
 
 .funnel-layout {
     display: grid;
-    grid-template-columns: minmax(0, 2.2fr) minmax(280px, 0.85fr);
+    grid-template-columns: minmax(0, 3fr) minmax(280px, 0.9fr);
     gap: 2rem;
     align-items: start;
     margin-top: 1.5rem;
@@ -745,6 +745,7 @@ legend {
     padding: 0 0.4rem;
     font-size: 1.1rem;
     font-weight: 700;
+    color: var(--violet);
 }
 
 #funnel-form fieldset > p {
@@ -755,7 +756,7 @@ legend {
 
 .metric-fields {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1rem;
 }
 .metric-field {
@@ -783,6 +784,12 @@ legend {
     border-color: var(--violet);
     outline: none;
     box-shadow: 0 0 0 3px #ede9fe;
+}
+
+.metric-help {
+    color: var(--muted-text);
+    font-size: 0.78rem;
+    line-height: 1.35;
 }
 
 .results-grid {
