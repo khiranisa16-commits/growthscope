@@ -442,6 +442,45 @@ legend {
     accent-color: var(--violet);
 }
 
+.funnel-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 2.2fr) minmax(280px, 0.85fr);
+    gap: 2rem;
+    align-items: start;
+    margin-top: 1.5rem;
+}
+
+.funnel-main {
+    min-width: 0;
+}
+
+.funnel-guidance {
+    padding: 1.75rem;
+    border-radius: 1.25rem;
+    background: linear-gradient(
+        145deg,
+        #f5f3ff 0%,
+        #fff1ed 100%
+    );
+}
+
+.funnel-guidance h3 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+.funnel-tip {
+    display: grid;
+    gap: 0.15rem;
+    margin-top: 1.4rem;
+}
+
+.funnel-tip span {
+    color: var(--muted-text);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
 .setup-layout {
     display: grid;
     grid-template-columns: minmax(0, 2.2fr) minmax(300px, 0.9fr);
@@ -768,6 +807,10 @@ legend {
     .results-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .funnel-layout {
+    grid-template-columns: 1fr;
+}
 }
 
 /* Mobile */
