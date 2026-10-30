@@ -471,14 +471,41 @@ legend {
 
 .funnel-tip {
     display: grid;
-    gap: 0.15rem;
+    grid-template-columns: 2.5rem 1fr;
+    gap: 0.9rem;
+    align-items: center;
     margin-top: 1.4rem;
+}
+
+.funnel-tip div {
+    display: grid;
+    gap: 0.1rem;
 }
 
 .funnel-tip span {
     color: var(--muted-text);
     font-size: 0.9rem;
     line-height: 1.4;
+}
+
+.tip-tools-icon {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.tip-period-icon {
+    background: #e0f2fe;
+    color: #0ea5e9;
+}
+
+.tip-incomplete-icon {
+    background: #fff7ed;
+    color: #f97316;
+}
+
+.tip-insight-icon {
+    background: #fce7f3;
+    color: #ec4899;
 }
 
 .selected-tools {
