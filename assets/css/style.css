@@ -481,6 +481,41 @@ legend {
     line-height: 1.4;
 }
 
+.selected-tools {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 1rem 0 1.5rem;
+    padding: 0.8rem 1rem;
+    border-radius: 0.8rem;
+    background: #faf7ff;
+}
+
+.selected-tools-label {
+    margin-right: 0.25rem;
+    color: var(--muted-text);
+    font-size: 0.9rem;
+}
+
+.selected-tool-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.45rem 0.7rem;
+    border: 1px solid #e9e2ff;
+    border-radius: 999px;
+    background: #ffffff;
+    color: var(--navy);
+    font-size: 0.85rem;
+}
+
+.selected-tool-chip img {
+    width: 1.2rem;
+    height: 1.2rem;
+    object-fit: contain;
+}
+
 .setup-layout {
     display: grid;
     grid-template-columns: minmax(0, 2.2fr) minmax(300px, 0.9fr);

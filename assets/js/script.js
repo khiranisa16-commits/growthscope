@@ -34,20 +34,33 @@ setupForm.addEventListener("submit", function (event) {
     'input[name="tools"]:checked'
 );
 
-const toolNames = Array.from(selectedTools).map(function(tool) {
-    return tool.parentElement.textContent.trim();
-});
-
 const toolGuidance = document.getElementById("tool-guidance");
 
-if (toolNames.length > 0) {
-    toolGuidance.textContent = 
-    `You selected: ${toolNames.join(", ")}.`;
-    toolGuidance.hidden = false;
-} else {
-    toolGuidance.hidden = true;
-}
+toolGuidance.innerHTML = "";
 
+const selectedLabel = document.createElement("span");
+selectedLabel.className = "selected-tools-label";
+selectedLabel.textContent = "You selected:";
+toolGuidance.appendChild(selectedLabel);
+
+selectedTools.forEach((tool) => {
+    const chip = document.createElement("span");
+    chip.className = "selected-tool-chip";
+
+    const toolName = tool.parentElement.textContent.trim();
+    const logo = tool.parentElement.querySelector(".tool-logo");
+
+    if (logo) {
+        const chipLogo = logo.cloneNode(true);
+        chip.appendChild(chipLogo);
+    }
+
+    chip.append(toolName);
+    toolGuidance.appendChild(chip);
+});
+
+toolGuidance.hidden = selectedTools.length === 0;
+ 
 
     setupStep.hidden = true;
     funnelStep.hidden = false;
