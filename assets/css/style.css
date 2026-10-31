@@ -282,6 +282,11 @@ button {
     padding: 2.5rem 3rem;
 }
 
+#results-step .analysis-card {
+    max-width: 1050px;
+    padding: 2.5rem 3rem;
+}
+
 .progress {
     margin-bottom: 3rem;
 }
