@@ -853,6 +853,10 @@ legend {
     box-shadow: 0 0 0 3px #ede9fe;
 }
 
+.metric-field input::placeholder {
+    color: #94a3b8;
+}
+
 .metric-help {
     color: var(--muted-text);
     font-size: 0.78rem;
