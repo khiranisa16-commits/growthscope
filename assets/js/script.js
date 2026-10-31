@@ -22,73 +22,141 @@ const funnelGuidance = document.querySelector(".funnel-guidance");
 
 const funnelInsight = document.getElementById("funnel-insight");
 
-const spendGuidance = document.getElementById("spend-guidance");
-const spendGuidanceContent = document.getElementById(
-    "spend-guidance-content"
-);
-
 let userExperience = "";
 let userTools = [];
 
-function updateSpendGuidance() {
-    spendGuidanceContent.innerHTML = "";
-    spendGuidance.hidden = true;
-    spendGuidance.removeAttribute("open");
+const trafficGuidance = {
+    spend: {
+        definition:
+            "The total amount you spent on paid advertising during the period you are analysing.",
+
+        tools: {
+            "google-ads":
+                "<strong>Google Ads</strong><br>" +
+                "1. Open Google Ads and go to Campaigns.<br>" +
+                "2. Set the date range to the period you are analysing.<br>" +
+                "3. Find the Cost column.<br>" +
+                "4. Copy the total Cost for that period.<br>" +
+                "Can't see it? Use Columns to add Cost.",
+
+            "meta-ads":
+                "<strong>Meta Ads</strong><br>" +
+                "1. Open Ads Manager.<br>" +
+                "2. Set the date range to the period you are analysing.<br>" +
+                "3. Find Amount spent in your reporting columns.<br>" +
+                "4. Copy the total for that period.",
+
+            "linkedin-ads":
+                "<strong>LinkedIn Ads</strong><br>" +
+                "1. Open Campaign Manager and select your ad account.<br>" +
+                "2. Set the reporting date range.<br>" +
+                "3. Choose the Performance columns.<br>" +
+                "4. Find Spent and copy the total."
+        },
+
+        note:
+            "Using more than one ad platform? Add the spend from each platform together."
+    },
+
+    impressions: {
+        definition:
+            "The total number of times your ads were shown during the reporting period.",
+
+        tools: {
+            "google-ads":
+                "<strong>Google Ads</strong><br>" +
+                "Go to Campaigns, set your date range and copy the total from the Impr. column.",
+
+            "meta-ads":
+                "<strong>Meta Ads</strong><br>" +
+                "Open Ads Manager, set your date range and find Impressions in the reporting columns.",
+
+            "linkedin-ads":
+                "<strong>LinkedIn Ads</strong><br>" +
+                "Open Campaign Manager, choose Performance columns and copy Impressions."
+        },
+
+        note:
+            "If you use several ad platforms, add their impressions together."
+    },
+
+    clicks: {
+        definition:
+            "The number of times people clicked through from your paid ads.",
+
+        tools: {
+            "google-ads":
+                "<strong>Google Ads</strong><br>" +
+                "Go to Campaigns, set the same date range and copy Clicks.",
+
+            "meta-ads":
+                "<strong>Meta Ads</strong><br>" +
+                "Open Ads Manager and use Link clicks so the figure represents clicks through from your ads.",
+
+            "linkedin-ads":
+                "<strong>LinkedIn Ads</strong><br>" +
+                "Open Campaign Manager, choose Performance columns and copy Clicks."
+        },
+
+        note:
+            "Use the same type of click across your channels where possible."
+    },
+
+    visits: {
+        definition:
+            "The total number of website sessions during the period you are analysing.",
+
+        tools: {
+            "ga4":
+                "<strong>GA4</strong><br>" +
+                "1. Open Google Analytics.<br>" +
+                "2. Go to Reports → Acquisition → Traffic acquisition.<br>" +
+                "3. Set the same date range as your campaign data.<br>" +
+                "4. Copy the Sessions total."
+        },
+
+        note:
+            "Use GA4 for website sessions rather than adding clicks from your ad platforms."
+    }
+};
+
+function renderTrafficGuidance(metric) {
+    const panel = document.getElementById(`${metric}-guidance`);
+    const content = document.getElementById(
+        `${metric}-guidance-content`
+    );
+
+    const guidance = trafficGuidance[metric];
+
+    panel.hidden = true;
+    panel.removeAttribute("open");
+    content.innerHTML = "";
 
     if (userExperience === "experienced") {
         return;
     }
 
-    const instructions = [];
-
-    if (userTools.includes("google-ads")) {
-        instructions.push(
-            "<strong>Google Ads</strong><br>" +
-            "1. Open Google Ads and go to Campaigns.<br>" +
-            "2. Set the date range to the period you are analysing.<br>" +
-            "3. Find the Cost column in the campaign table.<br>" +
-            "4. Copy the total Cost for that period.<br>" +
-            "Can't see Cost? Use Columns to add it."
-        );
-    }
-
-    if (userTools.includes("meta-ads")) {
-        instructions.push(
-            "<strong>Meta Ads</strong><br>" +
-            "1. Open Meta Ads Manager.<br>" +
-            "2. Set the date range to the period you are analysing.<br>" +
-            "3. Look for the Amount spent column.<br>" +
-            "4. Copy the total amount spent for that period."
-        );
-    }
-
-    if (userTools.includes("linkedin-ads")) {
-        instructions.push(
-            "<strong>LinkedIn Ads</strong><br>" +
-            "1. Open Campaign Manager and select your ad account.<br>" +
-            "2. Set the reporting date range.<br>" +
-            "3. Use the Performance columns.<br>" +
-            "4. Find Spent and copy the total for that period."
-        );
-    }
+    const instructions = userTools
+        .filter(function (tool) {
+            return guidance.tools[tool];
+        })
+        .map(function (tool) {
+            return `<p>${guidance.tools[tool]}</p>`;
+        });
 
     if (instructions.length === 0) {
         return;
     }
 
-    spendGuidanceContent.innerHTML =
-        "<p><strong>What is Spend?</strong><br>" +
-        "The total amount you spent on paid advertising during the period you are analysing.</p>" +
-        instructions.map(function (instruction) {
-            return `<p>${instruction}</p>`;
-        }).join("") +
-        "<p><strong>Using more than one ad platform?</strong><br>" +
-        "Add the spend from each platform together before entering the total above.</p>";
+    content.innerHTML =
+        `<p><strong>What is this?</strong><br>${guidance.definition}</p>` +
+        instructions.join("") +
+        `<p><strong>Tip:</strong> ${guidance.note}</p>`;
 
-    spendGuidance.hidden = false;
+    panel.hidden = false;
 
-    if (userExperience === "beginner") {
-        spendGuidance.setAttribute("open", "");
+    if (userExperience === "beginner" && metric === "spend") {
+        panel.setAttribute("open", "");
     }
 }
 
@@ -127,6 +195,11 @@ setupForm.addEventListener("submit", function (event) {
 userTools = Array.from(selectedTools).map(function (tool) {
     return tool.value;
 });
+
+renderTrafficGuidance("spend");
+renderTrafficGuidance("impressions");
+renderTrafficGuidance("clicks");
+renderTrafficGuidance("visits");
 
 updateSpendGuidance();
 
