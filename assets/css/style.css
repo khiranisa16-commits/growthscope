@@ -994,6 +994,43 @@ legend {
     background-color: #f9fafb;
 }
 
+.review-heading {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.review-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 2.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.7rem;
+    line-height: 0;
+}
+
+.review-icon svg {
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.review-traffic-icon {
+    background: #ede9fe;
+    color: var(--violet);
+}
+
+.review-leads-icon {
+    background: #fff1ed;
+    color: var(--coral);
+}
+
+.review-customer-icon {
+    background: #dcfce7;
+    color: #10b981;
+}
+
 /* Tablet */
 @media (max-width: 900px) {
     .hero {
