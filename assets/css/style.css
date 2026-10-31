@@ -579,13 +579,28 @@ legend {
 .setup-layout {
     display: grid;
     grid-template-columns: minmax(0, 2.2fr) minmax(300px, 0.9fr);
+    grid-template-areas:
+        "main guidance"
+        "main actions";
     gap: 2rem;
     align-items: start;
     margin-top: 2rem;
 }
 
 .setup-main {
+    grid-area: main;
     min-width: 0;
+}
+
+.setup-guidance {
+    grid-area: guidance;
+}
+
+.setup-actions {
+    grid-area: actions;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
 }
 
 .experience-icon{
@@ -1021,6 +1036,15 @@ legend {
 
     .setup-layout {
     grid-template-columns: 1fr;
+    grid-template-areas:
+        "main"
+        "actions"
+        "guidance";
+    }
+
+    .setup-actions {
+        justify-content: flex-end;
+        margin: 0.5rem 0 1rem;
     }
 
     .experience-options {
