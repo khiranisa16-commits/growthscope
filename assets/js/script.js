@@ -201,8 +201,6 @@ renderTrafficGuidance("impressions");
 renderTrafficGuidance("clicks");
 renderTrafficGuidance("visits");
 
-updateSpendGuidance();
-
 const toolGuidance = document.getElementById("tool-guidance");
 
 toolGuidance.innerHTML = "";
