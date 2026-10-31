@@ -789,7 +789,8 @@ legend {
 .setup-actions {
     display: flex;
     justify-content: flex-end;
-    margin-top: 2rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
 }
 
 .form-note {
