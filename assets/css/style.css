@@ -705,6 +705,17 @@ legend {
     );
 }
 
+.beginner-guidance-decor {
+    margin-top: 1.5rem;
+    overflow: hidden;
+}
+
+.beginner-guidance-decor img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 .guidance-badge { 
     display: inline-flex;
     align-items: center;
