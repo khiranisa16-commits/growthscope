@@ -140,12 +140,14 @@ function renderTrafficGuidance(metric) {
         .filter(function (tool) {
             return guidance.tools[tool];
         })
-        .map(function (tool) {
+       .map(function (tool) {
+        return `
             <div class="tool-guidance-card">
-            ${guidance.tools[tool]}
-            </div>;
-        });
-
+                ${guidance.tools[tool]}
+            </div>
+        `;
+    });
+    
     if (instructions.length === 0) {
         return;
     }
