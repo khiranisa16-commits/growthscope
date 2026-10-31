@@ -177,6 +177,16 @@ button {
     background-color: var(--violet-dark);
 }
 
+#back-to-review {
+    border: 1px solid #ddd6fe;
+    background: #ffffff;
+    color: var(--violet);
+}
+
+#back-to-review:hover {
+    background: var(--lilac);
+}
+
 #back-to-setup {
     margin-right: 0.5rem;
     border: 1px solid #ddd6fe;
