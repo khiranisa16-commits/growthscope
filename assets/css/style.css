@@ -151,6 +151,17 @@ button {
     font-size: 1.125rem;
 }
 
+#back-to-funnel {
+    margin-right: 0.5rem;
+    border: 1px solid #ddd6fe;
+    background: #ffffff;
+    color: var(--violet);
+}
+
+#back-to-funnel:hover {
+    background: var(--lilac);
+}
+
 .button {
     display: inline-block;
     padding: 0.75rem 1.25rem;
