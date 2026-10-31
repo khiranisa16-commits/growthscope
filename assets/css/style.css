@@ -1277,6 +1277,17 @@ legend {
         grid-template-columns: 1fr;
     }
 
+    #funnel-insight {
+        padding: 1rem;
+    }
+
+    #funnel-insight::before {
+        position: static;
+        display: flex;
+        margin-bottom: 0.75rem;
+        transform: none;
+    }
+
     .results-grid {
         grid-template-columns: 1fr;
     }
