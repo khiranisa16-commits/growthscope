@@ -266,6 +266,11 @@ button {
     padding: 2.5rem 3rem;
 }
 
+#funnel-step .analysis-card {
+    max-width: 1180px;
+    padding: 2.5rem 3rem;
+}
+
 .progress {
     margin-bottom: 3rem;
 }
@@ -455,7 +460,7 @@ legend {
 
 .funnel-layout {
     display: grid;
-    grid-template-columns: minmax(0, 3fr) minmax(280px, 0.9fr);
+    grid-template-columns: minmax(0, 2.5fr) minmax(300px, 0.9fr);
     gap: 2rem;
     align-items: start;
     margin-top: 1.5rem;
