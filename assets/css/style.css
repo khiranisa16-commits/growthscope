@@ -486,18 +486,15 @@ legend {
 }
 
 .guidance-chart {
-    margin-top: 1.75rem;
-    padding: 0.75rem;
-    border: 1px solid #ede9fe;
+    margin-top: 1.75rem -1.75rem -1.75rem;
+    overflow: hidden;
     border-radius: 1rem;
-    background: rgba(255, 255, 255, 0.65);
 }
 
 .guidance-chart img {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 0.75rem;
 }
 
 .funnel-tip {
@@ -706,8 +703,9 @@ legend {
 }
 
 .beginner-guidance-decor {
-    margin-top: 1.5rem;
+    margin-top: 1.5rem -1.75rem -175rem;
     overflow: hidden;
+    border-radius: 0 0 1.25rem 1.25rem;
 }
 
 .beginner-guidance-decor img {
