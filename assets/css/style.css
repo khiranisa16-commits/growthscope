@@ -998,6 +998,19 @@ legend {
     background-color: #f9fafb;
 }
 
+.review-group dt {
+    color: var(--muted-text);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.review-group dd {
+    margin: 0.2rem 0 0;
+    color: var(--navy);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
 .review-heading {
     display: flex;
     align-items: center;
