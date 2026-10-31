@@ -141,7 +141,9 @@ function renderTrafficGuidance(metric) {
             return guidance.tools[tool];
         })
         .map(function (tool) {
-            return `<p>${guidance.tools[tool]}</p>`;
+            <div class="tool-guidance-card">
+            ${guidance.tools[tool]}
+            </div>;
         });
 
     if (instructions.length === 0) {
@@ -149,9 +151,16 @@ function renderTrafficGuidance(metric) {
     }
 
     content.innerHTML =
-        `<p><strong>What is this?</strong><br>${guidance.definition}</p>` +
-        instructions.join("") +
-        `<p><strong>Tip:</strong> ${guidance.note}</p>`;
+        `<div class="guidance-definition">
+            <strong>What is this?</strong>
+            <p>${guidance.definition}</p>
+        </div>` +
+        `<div class="tool-guidance-grid">
+            ${instructions.join("")}
+        </div>` +
+        `<div class="guidance-note">
+            <strong>Tip:</strong> ${guidance.note}
+        </div>`;
 
     panel.hidden = false;
 
