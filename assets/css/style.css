@@ -579,28 +579,19 @@ legend {
 .setup-layout {
     display: grid;
     grid-template-columns: minmax(0, 2.2fr) minmax(300px, 0.9fr);
-    grid-template-areas:
-        "main guidance"
-        "main actions";
     gap: 2rem;
     align-items: start;
     margin-top: 2rem;
 }
 
 .setup-main {
-    grid-area: main;
     min-width: 0;
 }
 
-.setup-guidance {
-    grid-area: guidance;
-}
-
 .setup-actions {
-    grid-area: actions;
     display: flex;
     justify-content: flex-end;
-    margin: 0;
+    margin-top: 1.25rem;
 }
 
 .experience-icon{
@@ -1033,18 +1024,27 @@ legend {
     .funnel-layout {
     grid-template-columns: 1fr;
     }
+    
+    #setup-form {
+    display: grid;
+    }
 
     .setup-layout {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-        "main"
-        "actions"
-        "guidance";
+    display: contents;
+    }
+
+    .setup-main{
+        order: 1;
     }
 
     .setup-actions {
+        order: 2;
         justify-content: flex-end;
-        margin: 0.5rem 0 1rem;
+        margin: 1rem 0 1.5rem;
+    }
+
+    .setup-guidance {
+    order: 3;
     }
 
     .experience-options {
