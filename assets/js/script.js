@@ -18,6 +18,7 @@ const analyseFunnelButton = document.getElementById("analyse-funnel");
 const backToReviewButton = document.getElementById("back-to-review");
 
 const beginnerGuidance = document.getElementById("beginner-guidance");
+const funnelGuidance = document.querySelector(".funnel-guidance");
 
 const funnelInsight = document.getElementById("funnel-insight");
 
@@ -33,7 +34,24 @@ setupForm.addEventListener("submit", function (event) {
 
     userExperience=selectedExperience.value;
 
-    beginnerGuidance.hidden = selectedExperience.value !== "beginner";
+    if (userExperience === "beginner") {
+    beginnerGuidance.textContent =
+        "New to funnel metrics? We’ll explain what each number means and help you find it in the tools you selected.";
+
+    beginnerGuidance.hidden = false;
+    funnelGuidance.hidden = false;
+
+    } else if (userExperience === "comfortable") {
+        beginnerGuidance.textContent =
+            "You’ll get a cleaner view, with extra guidance available when you need it.";
+
+        beginnerGuidance.hidden = false;
+        funnelGuidance.hidden = false;
+
+    } else {
+        beginnerGuidance.hidden = true;
+        funnelGuidance.hidden = true;
+    }
 
     const selectedTools = document.querySelectorAll(
     'input[name="tools"]:checked'
