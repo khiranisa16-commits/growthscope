@@ -21,6 +21,9 @@ const beginnerGuidance = document.getElementById("beginner-guidance");
 
 const funnelInsight = document.getElementById("funnel-insight");
 
+let userExperience = "";
+let userTools = [];
+
 setupForm.addEventListener("submit", function (event) {
     event.preventDefault();
 
@@ -28,11 +31,17 @@ setupForm.addEventListener("submit", function (event) {
     'input[name="experience"]:checked'
     );
 
+    userExperience=selectedExperience.value;
+
     beginnerGuidance.hidden = selectedExperience.value !== "beginner";
 
     const selectedTools = document.querySelectorAll(
     'input[name="tools"]:checked'
 );
+
+userTools = Array.from(selectedTools).map(function (tool) {
+    return tool.value;
+});
 
 const toolGuidance = document.getElementById("tool-guidance");
 
