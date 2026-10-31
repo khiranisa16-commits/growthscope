@@ -84,7 +84,18 @@ const trafficGuidance = {
 
             "linkedin-ads":
                 "<strong>LinkedIn Ads</strong><br>" +
-                "Open Campaign Manager, choose Performance columns and copy Impressions."
+                "Open Campaign Manager, choose Performance columns and copy Impressions.",
+            
+            "other":
+                "<strong>Other tool</strong><br>" +
+                "Look in the advertising platform or reporting tool where your campaigns are running. " +
+                "Find a metric called Impressions, Views or Times shown, and use the total for the same reporting period.",
+
+            "not-sure":
+                "<strong>Not sure where to look?</strong><br>" +
+                "Impressions usually come from your advertising platform. " +
+                "Look for a metric called Impressions or Views. " +
+                "If you are not running paid campaigns, you can leave this field blank."
         },
 
         note:
@@ -106,7 +117,18 @@ const trafficGuidance = {
 
             "linkedin-ads":
                 "<strong>LinkedIn Ads</strong><br>" +
-                "Open Campaign Manager, choose Performance columns and copy Clicks."
+                "Open Campaign Manager, choose Performance columns and copy Clicks.",
+            
+            "other":
+                "<strong>Other tool</strong><br>" +
+                "Look in the platform where your ads or campaigns are running. " +
+                "Find Clicks, Link clicks or a similar click-through metric for the same reporting period.",
+
+            "not-sure":
+                "<strong>Not sure where to look?</strong><br>" +
+                "Clicks are usually tracked in your advertising platform. " +
+                "Look for Clicks or Link clicks. " +
+                "If you cannot find a reliable click number, leave this field blank."
         },
 
         note:
@@ -123,7 +145,17 @@ const trafficGuidance = {
                 "1. Open Google Analytics.<br>" +
                 "2. Go to Reports → Acquisition → Traffic acquisition.<br>" +
                 "3. Set the same date range as your campaign data.<br>" +
-                "4. Copy the Sessions total."
+                "4. Copy the Sessions total.",
+            "other":
+                "<strong>Other tool</strong><br>" +
+                "Use your website analytics platform and look for Sessions, Visits or Website traffic. " +
+                "Set the same reporting period and use the total number of visits or sessions.",
+
+            "not-sure":
+                "<strong>Not sure where to look?</strong><br>" +
+                "Website sessions usually come from an analytics tool such as Google Analytics. " +
+                "Look for Sessions, Visits or Website traffic. " +
+                "If you do not have website analytics set up, leave this field blank."
         },
 
         note:
