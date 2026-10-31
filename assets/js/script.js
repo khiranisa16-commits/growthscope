@@ -56,7 +56,7 @@ const trafficGuidance = {
 
         note:
             "Using more than one ad platform? Add the spend from each platform together."
-    },
+    }
 
     impressions: {
         definition:
@@ -78,7 +78,7 @@ const trafficGuidance = {
 
         note:
             "If you use several ad platforms, add their impressions together."
-    },
+    }
 
     clicks: {
         definition:
@@ -100,7 +100,7 @@ const trafficGuidance = {
 
         note:
             "Use the same type of click across your channels where possible."
-    },
+    }
 
     visits: {
         definition:
@@ -117,7 +117,7 @@ const trafficGuidance = {
 
         note:
             "Use GA4 for website sessions rather than adding clicks from your ad platforms."
-    }
+    },
 
     leads: {
         definition:
@@ -153,7 +153,7 @@ const trafficGuidance = {
 
             note:
                 "Use your organisation's definition of a lead consistently across the whole reporting period."
-    } 
+    }, 
     
     mqls: {
         definition:
@@ -222,7 +222,77 @@ const trafficGuidance = {
 
         note:
             "Count opportunities using the same definition and date period across your funnel."
-    }
+    },
+
+    customers: {
+    definition:
+        "The number of new customers won during the period you are analysing.",
+
+    tools: {
+        "hubspot":
+            "<strong>HubSpot</strong><br>" +
+            "1. Open Contacts.<br>" +
+            "2. Filter by Lifecycle stage = Customer.<br>" +
+            "3. Set the reporting period you are analysing.<br>" +
+            "4. Use the number of contacts that became customers during that period.",
+
+        "salesforce":
+            "<strong>Salesforce</strong><br>" +
+            "1. Open the Reports tab.<br>" +
+            "2. Use an Opportunities report.<br>" +
+            "3. Filter Stage = Closed Won.<br>" +
+            "4. Set the reporting period.<br>" +
+            "5. Use the number of won opportunities as your customer count.",
+
+        "other":
+            "<strong>Other tool</strong><br>" +
+            "Look in your CRM, sales platform or customer database for new customers, closed-won deals or completed sales. " +
+            "Use the count for the same reporting period.",
+
+        "not-sure":
+            "<strong>Not sure where to look?</strong><br>" +
+            "Customer numbers are usually tracked in a CRM, sales system or billing platform. " +
+            "Look for Closed Won, Customers or Completed Sales. " +
+            "If you cannot find a reliable number, leave this field blank."
+    },
+
+    note:
+        "Use the same customer definition your organisation uses for reporting."
+},
+
+    revenue: {
+        definition:
+            "The total revenue generated from the customers included in this funnel period.",
+
+        tools: {
+            "hubspot":
+                "<strong>HubSpot</strong><br>" +
+                "1. Open Deals or your sales reports.<br>" +
+                "2. Filter to closed-won deals for the reporting period.<br>" +
+                "3. Find the Amount or revenue value.<br>" +
+                "4. Use the total revenue for those deals.",
+
+            "salesforce":
+                "<strong>Salesforce</strong><br>" +
+                "1. Open an Opportunities report.<br>" +
+                "2. Filter Stage = Closed Won.<br>" +
+                "3. Set the reporting period.<br>" +
+                "4. Sum the Amount field for those opportunities.",
+
+            "other":
+                "<strong>Other tool</strong><br>" +
+                "Use your CRM, sales system or finance platform to find revenue from new customers or won deals during the same period.",
+
+            "not-sure":
+                "<strong>Not sure where to look?</strong><br>" +
+                "Revenue is usually available in your CRM, sales system, ecommerce platform or finance software. " +
+                "Use the total linked to the customers in this funnel if possible. " +
+                "If you cannot match revenue reliably, leave it blank."
+        },
+
+        note:
+            "Make sure the revenue period matches the rest of the funnel data." 
+    }   
 
 };
 
@@ -320,6 +390,8 @@ renderTrafficGuidance("visits");
 renderTrafficGuidance("leads");
 renderTrafficGuidance("mqls");
 renderTrafficGuidance("opportunities");
+renderTrafficGuidance("customers");
+renderTrafficGuidance("revenue");
 
 const toolGuidance = document.getElementById("tool-guidance");
 
