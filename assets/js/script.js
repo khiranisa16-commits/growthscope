@@ -180,9 +180,8 @@ function showReviewValue(id, value, isCurrency = false) {
     });
 
     if (!hasData) {
-        funnelFeedback.textContent = 
-        "Enter at least one funnel metric before continuing.";
-        return;
+        funnelFeedback.textContent = "";
+        funnelFeedback.className="data-check";
     }
 
 
@@ -231,11 +230,15 @@ function showReviewValue(id, value, isCurrency = false) {
         }
 
         if (warnings.length > 0) {
-            dataCheck.textContent = 
-            `Check your data: ${warnings.join(" ")}`;
+            dataCheck.textContent =
+                `Check your data: ${warnings.join(" ")}`;
+
+            dataCheck.className = "data-check feedback-warning";
         } else {
-            dataCheck.textContent = 
-            "Your data is ready to analyse.";
+            dataCheck.textContent =
+                "Your data is ready to analyse.";
+
+            dataCheck.className = "data-check feedback-success";
         }
         
 
