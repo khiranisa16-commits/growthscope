@@ -857,6 +857,35 @@ legend {
     color: var(--violet-dark);
 }
 
+#funnel-insight {
+    position: relative;
+    padding: 1rem 1.25rem 1rem 4rem;
+    border-radius: 1rem;
+    background: linear-gradient(
+        135deg,
+        #f5f3ff 0%,
+        #fff7fb 100%
+    );
+    color: var(--violet-dark);
+}
+
+#funnel-insight::before {
+    content: "✦";
+    position: absolute;
+    top: 50%;
+    left: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 0.6rem;
+    background: #ede9fe;
+    color: var(--violet);
+    font-size: 1rem;
+    transform: translateY(-50%);
+}
+
 .site-footer {
     padding: 2rem;
     border-top: 1px solid #e5e7eb;
