@@ -284,6 +284,8 @@ analyseFunnelButton.addEventListener("click", function () {
     showResult("result-cac", cac, "currency");
     showResult("result-roas", roas, "ratio");
 
+    funnelInsight.className = "data-check feedback-info";
+
     if (ctr !== null && ctr < 1) {
         funnelInsight.textContent = 
         "Your click-through rate is low. Improving ad relevance or creative could help drive more traffic.";
