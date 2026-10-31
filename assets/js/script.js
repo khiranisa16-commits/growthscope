@@ -153,8 +153,76 @@ const trafficGuidance = {
 
             note:
                 "Use your organisation's definition of a lead consistently across the whole reporting period."
-    }   
+    } 
+    
+    mqls: {
+        definition:
+            "Leads that meet your marketing team's criteria for being ready for further sales attention.",
 
+        tools: {
+            "hubspot":
+                "<strong>HubSpot</strong><br>" +
+                "1. Open Contacts.<br>" +
+                "2. Filter by Lifecycle stage = Marketing Qualified Lead.<br>" +
+                "3. Set the reporting period you are analysing.<br>" +
+                "4. Use the number of contacts that became MQLs during that period.",
+
+            "salesforce":
+                "<strong>Salesforce</strong><br>" +
+                "MQL is not always a standard Salesforce field.<br>" +
+                "1. Check whether your organisation uses Lead Status, a custom MQL field or a marketing integration.<br>" +
+                "2. Filter to the period you are analysing.<br>" +
+                "3. Use the number your organisation defines as MQLs.",
+
+            "other":
+                "<strong>Other tool</strong><br>" +
+                "Look for a lifecycle stage, lead status or qualification field that identifies marketing-qualified leads. " +
+                "Use the count for the same reporting period.",
+
+            "not-sure":
+                "<strong>Not sure where to look?</strong><br>" +
+                "Ask how your organisation defines an MQL. It may be based on lead score, behaviour, job role or another qualification rule. " +
+                "If MQLs are not tracked, leave this field blank."
+        },
+
+        note:
+            "Use the same MQL definition your organisation uses internally."
+    },
+
+    opportunities: {
+        definition:
+            "Qualified potential deals that have progressed into an active sales opportunity.",
+
+        tools: {
+            "hubspot":
+                "<strong>HubSpot</strong><br>" +
+                "1. Open Contacts or Deals.<br>" +
+                "2. Filter by Lifecycle stage = Opportunity, or use your Deals pipeline.<br>" +
+                "3. Set the same reporting period.<br>" +
+                "4. Count the opportunities created during that period.",
+
+            "salesforce":
+                "<strong>Salesforce</strong><br>" +
+                "1. Open the Reports tab.<br>" +
+                "2. Create or open an Opportunities report.<br>" +
+                "3. Set Created Date to the reporting period.<br>" +
+                "4. Use the total number of opportunities created.",
+
+            "other":
+                "<strong>Other tool</strong><br>" +
+                "Look in your CRM or sales platform for deals, opportunities or pipeline records. " +
+                "Use the number created during the same reporting period.",
+
+            "not-sure":
+                "<strong>Not sure where to look?</strong><br>" +
+                "Opportunities are usually tracked by the sales team in a CRM. " +
+                "Look for areas called Deals, Opportunities or Pipeline. " +
+                "If your organisation does not track this stage, leave it blank."
+        },
+
+        note:
+            "Count opportunities using the same definition and date period across your funnel."
+    }
 
 };
 
@@ -250,6 +318,8 @@ renderTrafficGuidance("impressions");
 renderTrafficGuidance("clicks");
 renderTrafficGuidance("visits");
 renderTrafficGuidance("leads");
+renderTrafficGuidance("mqls");
+renderTrafficGuidance("opportunities");
 
 const toolGuidance = document.getElementById("tool-guidance");
 
