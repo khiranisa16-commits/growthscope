@@ -22,8 +22,75 @@ const funnelGuidance = document.querySelector(".funnel-guidance");
 
 const funnelInsight = document.getElementById("funnel-insight");
 
+const spendGuidance = document.getElementById("spend-guidance");
+const spendGuidanceContent = document.getElementById(
+    "spend-guidance-content"
+);
+
 let userExperience = "";
 let userTools = [];
+
+function updateSpendGuidance() {
+    spendGuidanceContent.innerHTML = "";
+    spendGuidance.hidden = true;
+    spendGuidance.removeAttribute("open");
+
+    if (userExperience === "experienced") {
+        return;
+    }
+
+    const instructions = [];
+
+    if (userTools.includes("google-ads")) {
+        instructions.push(
+            "<strong>Google Ads</strong><br>" +
+            "1. Open Google Ads and go to Campaigns.<br>" +
+            "2. Set the date range to the period you are analysing.<br>" +
+            "3. Find the Cost column in the campaign table.<br>" +
+            "4. Copy the total Cost for that period.<br>" +
+            "Can't see Cost? Use Columns to add it."
+        );
+    }
+
+    if (userTools.includes("meta-ads")) {
+        instructions.push(
+            "<strong>Meta Ads</strong><br>" +
+            "1. Open Meta Ads Manager.<br>" +
+            "2. Set the date range to the period you are analysing.<br>" +
+            "3. Look for the Amount spent column.<br>" +
+            "4. Copy the total amount spent for that period."
+        );
+    }
+
+    if (userTools.includes("linkedin-ads")) {
+        instructions.push(
+            "<strong>LinkedIn Ads</strong><br>" +
+            "1. Open Campaign Manager and select your ad account.<br>" +
+            "2. Set the reporting date range.<br>" +
+            "3. Use the Performance columns.<br>" +
+            "4. Find Spent and copy the total for that period."
+        );
+    }
+
+    if (instructions.length === 0) {
+        return;
+    }
+
+    spendGuidanceContent.innerHTML =
+        "<p><strong>What is Spend?</strong><br>" +
+        "The total amount you spent on paid advertising during the period you are analysing.</p>" +
+        instructions.map(function (instruction) {
+            return `<p>${instruction}</p>`;
+        }).join("") +
+        "<p><strong>Using more than one ad platform?</strong><br>" +
+        "Add the spend from each platform together before entering the total above.</p>";
+
+    spendGuidance.hidden = false;
+
+    if (userExperience === "beginner") {
+        spendGuidance.setAttribute("open", "");
+    }
+}
 
 setupForm.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -60,6 +127,8 @@ setupForm.addEventListener("submit", function (event) {
 userTools = Array.from(selectedTools).map(function (tool) {
     return tool.value;
 });
+
+updateSpendGuidance();
 
 const toolGuidance = document.getElementById("tool-guidance");
 
