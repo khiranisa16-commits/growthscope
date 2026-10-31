@@ -1003,6 +1003,35 @@ legend {
     line-height: 1.35;
 }
 
+.metric-guidance {
+    margin-top: 0.75rem;
+    border: 1px solid #e9e2ff;
+    border-radius: 0.85rem;
+    background: #faf9ff;
+    overflow: hidden;
+}
+
+.metric-guidance summary {
+    padding: 0.9rem 1rem;
+    background: #f5f3ff;
+    color: var(--violet-dark);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.metric-guidance-content {
+    padding: 1.25rem;
+    color: var(--navy);
+}
+
+.metric-guidance-content p {
+    margin: 0 0 1rem;
+}
+
+.metric-guidance-content p:last-child {
+    margin-bottom: 0;
+}
+
 #funnel-form fieldset:nth-of-type(2) .metric-fields {
     grid-template-columns: repeat(3, minmax(0, 1fr));
 }
