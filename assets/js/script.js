@@ -56,7 +56,7 @@ const trafficGuidance = {
 
         note:
             "Using more than one ad platform? Add the spend from each platform together."
-    }
+    },
 
     impressions: {
         definition:
@@ -78,7 +78,7 @@ const trafficGuidance = {
 
         note:
             "If you use several ad platforms, add their impressions together."
-    }
+    },
 
     clicks: {
         definition:
@@ -100,7 +100,7 @@ const trafficGuidance = {
 
         note:
             "Use the same type of click across your channels where possible."
-    }
+    },
 
     visits: {
         definition:
