@@ -51,7 +51,18 @@ const trafficGuidance = {
                 "1. Open Campaign Manager and select your ad account.<br>" +
                 "2. Set the reporting date range.<br>" +
                 "3. Choose the Performance columns.<br>" +
-                "4. Find Spent and copy the total."
+                "4. Find Spent and copy the total.",
+            
+            "other":
+                "<strong>Other tool</strong><br>" +
+                "Look in the advertising platform or reporting tool where your campaign costs are recorded. " +
+                "Set the same reporting period and find the total amount spent on paid advertising.",
+
+            "not-sure":
+                "<strong>Not sure where to look?</strong><br>" +
+                "Spend normally comes from the platform where your paid ads are running. " +
+                "Look for a metric called Cost, Spend or Amount spent. " +
+                "If you are not running paid advertising, you can leave this field blank."
         },
 
         note:
