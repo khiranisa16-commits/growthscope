@@ -1082,8 +1082,10 @@ legend {
         padding: 2rem 1rem;
     }
 
-    .metric-fields {
-    grid-template-columns: 1fr;
+    #funnel-form fieldset .metric-fields,
+    #funnel-form fieldset:nth-of-type(2) .metric-fields,
+    #funnel-form fieldset:nth-of-type(3) .metric-fields {
+        grid-template-columns: 1fr;
     }
 
     .results-grid {
@@ -1091,6 +1093,15 @@ legend {
     }
 
     .review-group dl {
+        grid-template-columns: 1fr;
+    }
+    
+    #analysis .analysis-card,
+    #funnel-step .analysis-card {
+        padding: 1.25rem;
+    }
+
+    .experience-options {
         grid-template-columns: 1fr;
     }
 }
