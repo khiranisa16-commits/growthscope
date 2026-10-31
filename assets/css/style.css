@@ -488,24 +488,28 @@ legend {
     line-height: 1.4;
 }
 
-.tip-tools-icon {
-    background: #dcfce7;
-    color: #16a34a;
+.funnel-tip-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.75rem;
+    line-height: 0;
 }
 
-.tip-period-icon {
-    background: #e0f2fe;
-    color: #0ea5e9;
+.funnel-tip-icon svg {
+    display: block;
+    width: 1.15rem;
+    height: 1.15rem;
 }
 
-.tip-incomplete-icon {
-    background: #fff7ed;
-    color: #f97316;
-}
-
+.tip-tools-icon,
+.tip-period-icon, 
+.tip-incomplete-icon,
 .tip-insight-icon {
-    background: #fce7f3;
-    color: #ec4899;
+    background: #ede9fe;
+    color: var(--violet);
 }
 
 .selected-tools {
