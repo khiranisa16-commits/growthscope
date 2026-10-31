@@ -118,6 +118,44 @@ const trafficGuidance = {
         note:
             "Use GA4 for website sessions rather than adding clicks from your ad platforms."
     }
+
+    leads: {
+        definition:
+            "People or organisations who have shown enough interest to become a potential sales contact.",
+
+        tools: {
+            "hubspot":
+                "<strong>HubSpot</strong><br>" +
+                "1. Open Contacts.<br>" +
+                "2. Filter by Lifecycle stage = Lead.<br>" +
+                "3. Use the reporting period you are analysing.<br>" +
+                "4. Count the leads for that period.<br>" +
+                "If your team uses custom lifecycle stages, use your organisation's definition of a lead.",
+
+            "salesforce":
+                "<strong>Salesforce</strong><br>" +
+                "1. Open the Reports tab.<br>" +
+                "2. Create or open a Leads report.<br>" +
+                "3. Set Created Date to the period you are analysing.<br>" +
+                "4. Use the total number of leads in the report.",
+
+            "other":
+                "<strong>Other tool</strong><br>" +
+                "Open the system where your organisation stores leads or contacts. " +
+                "Find a lead report or contact list, set the same reporting period and use the number of new leads.",
+
+            "not-sure":
+                "<strong>Not sure where to look?</strong><br>" +
+                "Leads are usually stored in a CRM or marketing platform. " +
+                "Look for a contacts, leads or form-submissions area. " +
+             "If your organisation does not track leads, you can leave this field blank."
+            },
+
+            note:
+                "Use your organisation's definition of a lead consistently across the whole reporting period."
+    }   
+
+
 };
 
 function renderTrafficGuidance(metric) {
@@ -147,7 +185,7 @@ function renderTrafficGuidance(metric) {
             </div>
         `;
     });
-    
+
     if (instructions.length === 0) {
         return;
     }
@@ -211,6 +249,7 @@ renderTrafficGuidance("spend");
 renderTrafficGuidance("impressions");
 renderTrafficGuidance("clicks");
 renderTrafficGuidance("visits");
+renderTrafficGuidance("leads");
 
 const toolGuidance = document.getElementById("tool-guidance");
 
