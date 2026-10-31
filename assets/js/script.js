@@ -180,12 +180,14 @@ function showReviewValue(id, value, isCurrency = false) {
     });
 
     if (!hasData) {
-        funnelFeedback.textContent = "";
-        funnelFeedback.className="data-check";
+        funnelFeedback.textContent = "Enter at least one funnel metric before continuing";
+        funnelFeedback.className="data-check feedback-error";
+        return;
     }
 
 
         funnelFeedback.textContent = "";
+        funnelFeedback.className = "data-check";
         showReviewValue("review-spend", spend, true);
         showReviewValue("review-impressions", impressions);
         showReviewValue("review-clicks", clicks);
