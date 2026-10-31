@@ -166,6 +166,17 @@ button {
     background-color: var(--violet-dark);
 }
 
+#back-to-setup {
+    margin-right: 0.5rem;
+    border: 1px solid #ddd6fe;
+    background: #ffffff;
+    color: var(--violet);
+}
+
+#back-to-setup:hover {
+    background: var(--lilac);
+}
+
 .hero-visual {
     display: flex;
     align-items: center;
