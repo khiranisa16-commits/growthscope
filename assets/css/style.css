@@ -482,7 +482,7 @@ legend {
     gap: 0.1rem;
 }
 
-.funnel-tip span {
+.funnel-tip div span {
     color: var(--muted-text);
     font-size: 0.9rem;
     line-height: 1.4;
