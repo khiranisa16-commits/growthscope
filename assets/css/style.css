@@ -1016,7 +1016,21 @@ legend {
 
     .funnel-layout {
     grid-template-columns: 1fr;
-}
+    }
+
+    .setup-layout {
+    grid-template-columns: 1fr;
+    }
+
+    .experience-options {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .metric-fields,
+    #funnel-form fieldset:nth-of-type(2) .metric-fields,
+    #funnel-form fieldset:nth-of-type(3) .metric-fields {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 /* Mobile */
