@@ -1094,6 +1094,10 @@ legend {
         grid-template-columns: 1fr 1fr;
     }
 
+    .progress-list li::after {
+        display: none;
+    }
+
     .tool-options {
         grid-template-columns: 1fr;
     }
