@@ -832,7 +832,12 @@ analyseFunnelButton.addEventListener("click", function () {
                 `CTR: ${ctr.toFixed(1)}%. Investigate creative and audience performance. ${ctrAction}`;
         }
 
-        insights.push(ctrInsight);
+        insights.push({
+            title: "CTR",
+            value: `${ctr.toFixed(1)}%`,
+            message: ctrInsight,
+            action: ctrAction
+        });;
     }
 
 
@@ -851,8 +856,12 @@ analyseFunnelButton.addEventListener("click", function () {
                 `Lead to MQL: ${leadToMql.toFixed(1)}%. Investigate lead quality and qualification. ${leadToMqlAction}`;
         }
 
-        insights.push(leadToMqlInsight);
-    }
+        insights.push({
+        title: "Lead to MQL",
+        value: `${leadToMql.toFixed(1)}%`,
+        message: leadToMqlInsight,
+        action: leadToMqlAction
+    });
 
     if (roas !== null && roas < 2) {
         const roasAction = getRoasAction();
@@ -869,25 +878,40 @@ analyseFunnelButton.addEventListener("click", function () {
                 `ROAS: ${roas.toFixed(2)}×. Investigate campaign efficiency and revenue contribution. ${roasAction}`;
         }
 
-        insights.push(roasInsight);
+        insights.push({
+        title: "ROAS",
+        value: `${roas.toFixed(2)}×`,
+        message: roasInsight,
+        action: roasAction
+    });
+
     }
 
     if (cpc !== null) {
-        contextInsights.push(
-            `CPC: £${cpc.toFixed(2)}. This is how much you are spending for each click. GrowthScope does not label this as good or bad because an acceptable CPC depends on your market and campaign goals. Compare CPC across campaigns and channels to identify where traffic is costing more.`
-        );
-        }
+        contextInsights.push({
+            title: "CPC",
+            value: `£${cpc.toFixed(2)}`,
+            message:
+                "This is how much you are spending for each click. GrowthScope does not label this as good or bad because an acceptable CPC depends on your market and campaign goals. Compare CPC across campaigns and channels to identify where traffic is costing more."
+        });
+    }
 
     if (cpl !== null) {
-        contextInsights.push(
-            `CPL: £${cpl.toFixed(2)}. This is how much you are spending to generate each lead. GrowthScope does not label this as good or bad because an acceptable CPL depends on your business model and lead value. Compare CPL across campaigns, channels and lead sources to see where leads are costing more.`
-        );
-        }
+        contextInsights.push({
+            title: "CPL",
+            value: `£${cpl.toFixed(2)}`,
+            message:
+                "This is how much you are spending to generate each lead. GrowthScope does not label this as good or bad because an acceptable CPL depends on your business model and lead value. Compare CPL across campaigns, channels and lead sources to see where leads are costing more."
+        });
+    }
 
     if (cac !== null) {
-        contextInsights.push(
-            `CAC: £${cac.toFixed(2)}. This is how much you are spending to acquire each customer. GrowthScope does not label this as good or bad because a sustainable CAC depends on customer value and profitability. Compare CAC with average customer revenue or lifetime value before deciding whether acquisition is efficient.`
-        );
+        contextInsights.push({
+            title: "CAC",
+            value: `£${cac.toFixed(2)}`,
+            message:
+                "This is how much you are spending to acquire each customer. GrowthScope does not label this as good or bad because an acceptable CAC depends on your customer value and business model. Compare CAC against customer value and across campaigns or channels to identify expensive acquisition paths."
+        });
     }
             
     if (availableResults <= 1) {
@@ -904,13 +928,27 @@ analyseFunnelButton.addEventListener("click", function () {
                         ${insights.length} area${insights.length > 1 ? "s" : ""} to investigate
                     </strong>
 
-                    <ul>
-                        ${insights.map(function (insight) {
-                            return `<li>${insight}</li>`;
-                        }).join("")}
-                    </ul>
-                </div>
-            `;
+                   if (typeof insight === "string") {
+                        return `<li>${insight}</li>`;
+                    }
+
+                    return `
+                        <li class="insight-card">
+                            <div class="insight-card-heading">
+                                <strong>${insight.title}</strong>
+                                <span class="insight-value">
+                                    ${insight.value}
+                                </span>
+                            </div>
+
+                            <p>${insight.message}</p>
+
+                            <div class="insight-action">
+                                <strong>What to investigate</strong>
+                                <p>${insight.action}</p>
+                            </div>
+                        </li>
+                    `;
         } else {
             insightHtml += `
                 <div class="insight-section">
@@ -929,7 +967,22 @@ analyseFunnelButton.addEventListener("click", function () {
 
                     <ul>
                         ${contextInsights.map(function (insight) {
-                            return `<li>${insight}</li>`;
+                           if (typeof insight === "string") {
+                                return `<li>${insight}</li>`;
+                            }
+
+                            return `
+                                <li class="context-card">
+                                    <div class="context-card-heading">
+                                        <strong>${insight.title}</strong>
+                                        <span class="context-value">
+                                            ${insight.value}
+                                        </span>
+                                    </div>
+
+                                    <p>${insight.message}</p>
+                                </li>
+                            `;
                         }).join("")}
                     </ul>
                 </div>
