@@ -18,9 +18,11 @@ const analyseFunnelButton = document.getElementById("analyse-funnel");
 const backToReviewButton = document.getElementById("back-to-review");
 
 const beginnerGuidance = document.getElementById("beginner-guidance");
+const setupFeedback = document.getElementById("setup-feedback");
 const funnelGuidance = document.querySelector(".funnel-guidance");
 
 const funnelInsight = document.getElementById("funnel-insight");
+
 
 let userExperience = "";
 let userTools = [];
@@ -396,6 +398,17 @@ setupForm.addEventListener("submit", function (event) {
     const selectedExperience = document.querySelector(
     'input[name="experience"]:checked'
     );
+
+    if (!selectedExperience) {
+        setupFeedback.textContent = 
+        "Choose how familiar you are with marketing metrics before continuing.";
+
+        setupFeedback.className = "data-check feedback-error";
+        return;
+    }
+
+    setuupFeedback.textContent = "";
+    setupFeedback.className = "data-check";
 
     userExperience=selectedExperience.value;
 
