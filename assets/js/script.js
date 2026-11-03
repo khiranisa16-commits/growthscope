@@ -701,6 +701,34 @@ backToFunnelButton.addEventListener("click", function () {
 });
 });
 
+function getCtrAction() { 
+    const actions = [];
+
+    if (userTools.includes("google-ads")) {
+        actions.push(
+            "In Google Ads, compare CTR across your campaigns and ads. Review the lowest performers first and test your ad copy, offer or targeting."
+        );
+    }
+
+    if (userTools.includes("meta-ads")) {
+        actions.push(
+            "In Meta Ads Manager, compare Link CTR across your ads and audiences. Review weaker creative, messaging amd audience combinations."
+        );
+    }
+
+    if (userTools.includes("linkedin-ads")) {
+        actions.push(
+            "In LinkedIn Campaign Manager, compare CTR across campaigns and creatives. Review weaker ads and targeting combinations."
+        );
+    }
+
+    if (actions.length === 0) {
+        return "Compare performance across your campaigns and review your creative, message and audience targeting.";
+    }
+
+    return actions.join(" ");
+}
+
 analyseFunnelButton.addEventListener("click", function () {
     const spend = getInputValue("spend");
     const impressions = getInputValue("impressions");
@@ -727,8 +755,20 @@ analyseFunnelButton.addEventListener("click", function () {
     funnelInsight.className = "data-check feedback-info";
 
     if (ctr !== null && ctr < 1) {
+        const ctrAction = getCtrAction();
+        
+        if (userExperience === "beginner") {
         funnelInsight.textContent = 
-        "Your click-through rate is low. Improving ad relevance or creative could help drive more traffic.";
+            `Your CTR is ${ctr.toFixed(1)}%. This means about ${ctr.toFixed(1)} people clicked for every 100 ad impressions. GrowthScope has flagged this as an area to investigate. ${ctrAction}`;
+            } else if (userExperience === "comfortable") {
+                funnelInsight.textContent =
+                    `Your CTR is ${ctr.toFixed(1)}%. GrowthScope has flagged this as an area to investigate. ${ctrAction}`;
+            } else {
+                funnelInsight.textContent =
+                    `CTR: ${ctr.toFixed(1)}%. Investigate creative and audience performance. ${ctrAction}`;
+            }
+
+            
     } else if (leadToMql !== null && leadToMql < 30) {
         funnelInsight.textContent =
         "Lead qualification looks like a possible bottleneck. Review lead quality and qualification criteria.";
