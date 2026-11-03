@@ -751,6 +751,33 @@ function getLeadToMqlAction() {
     return actions.join(" ");
 }
 
+function getRoasAction() {
+    const actions = [];
+
+    if (userTools.includes("google-ads")) {
+        actions.push(
+            "In Google Ads, compare spend and conversion value by campaign to find where budget is producing weaker returns."
+        );
+    }
+
+    if (userTools.includes("hubspot")) {
+        actions.push(
+            "In HubSpot, review closed-won revenue by source or campaign to see which activity is contributing most to revenue."
+        );
+    }
+
+    if (userTools.includes("salesforce")) {
+        actions.push(
+            "In Salesforce, review Closed Won opportunities and Amount by source or campaign to understand where revenue is coming from."
+        );
+    }
+
+    if (actions.length === 0) {
+        return "Compare campaign spend with the revenue generated and identify which channels are producing weaker returns.";
+    }
+
+    return actions.join(" ");
+}
 
 analyseFunnelButton.addEventListener("click", function () {
     const spend = getInputValue("spend");
@@ -793,7 +820,7 @@ analyseFunnelButton.addEventListener("click", function () {
 
 
     } else if (leadToMql !== null && leadToMql < 30) {
-        const LeadToMqlAction = getLeadToMqlAction();
+        const leadToMqlAction = getLeadToMqlAction();
 
         if (userExperience === "beginner") {
         funnelInsight.textContent =
@@ -807,8 +834,19 @@ analyseFunnelButton.addEventListener("click", function () {
             }
 
     } else if (roas !== null && roas < 2) {
-        funnelInsight.textContent = 
-        "Your return on ad spend is relatively low. Review campaign costs and conversion performance.";
+            const roasAction = getRoasAction();
+
+            if (userExperience === "beginner") {
+                funnelInsight.textContent =
+                    `Your ROAS is ${roas.toFixed(2)}×. This means every £1 of ad spend generated about £${roas.toFixed(2)} in revenue. GrowthScope has flagged commercial return as an area to investigate. ${roasAction}`;
+            } else if (userExperience === "comfortable") {
+                funnelInsight.textContent =
+                    `Your ROAS is ${roas.toFixed(2)}×. Commercial return looks like an area to investigate. ${roasAction}`;
+            } else {
+                funnelInsight.textContent =
+                    `ROAS: ${roas.toFixed(2)}×. Investigate campaign efficiency and revenue contribution. ${roasAction}`;
+            }
+            
     } else {
         funnelInsight.textContent = 
         "No major issue stands out from the available data. Review each stage for smaller optimisation opportunities.";
