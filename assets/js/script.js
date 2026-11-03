@@ -712,7 +712,7 @@ function getCtrAction() {
 
     if (userTools.includes("meta-ads")) {
         actions.push(
-            "In Meta Ads Manager, compare Link CTR across your ads and audiences. Review weaker creative, messaging amd audience combinations."
+            "In Meta Ads Manager, compare Link CTR across your ads and audiences. Review weaker creative, messaging and audience combinations."
         );
     }
 
@@ -793,7 +793,7 @@ analyseFunnelButton.addEventListener("click", function () {
 
 
     } else if (leadToMql !== null && leadToMql < 30) {
-        const getLeadToMqlAction = getLeadToMqlAction();
+        const LeadToMqlAction = getLeadToMqlAction();
 
         if (userExperience === "beginner") {
         funnelInsight.textContent =
@@ -805,7 +805,7 @@ analyseFunnelButton.addEventListener("click", function () {
                 funnelInsight.textContent =
                     `Lead to MQL: ${leadToMql.toFixed(1)}%. Investigate lead quality and qualification. ${leadToMqlAction}`;
             }
-            
+
     } else if (roas !== null && roas < 2) {
         funnelInsight.textContent = 
         "Your return on ad spend is relatively low. Review campaign costs and conversion performance.";
