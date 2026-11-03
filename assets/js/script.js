@@ -415,11 +415,15 @@ setupForm.addEventListener("submit", function (event) {
             block: "center"
         });
 
+        const firstExperience = document.querySelector(
+            'input[name="experience"]'
+        );
+
         firstExperience.focus();
         return;
     }
 
-    setuupFeedback.textContent = "";
+    setupFeedback.textContent = "";
     setupFeedback.className = "data-check";
 
     userExperience=selectedExperience.value;
