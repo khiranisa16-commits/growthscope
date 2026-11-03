@@ -729,6 +729,29 @@ function getCtrAction() {
     return actions.join(" ");
 }
 
+function getLeadToMqlAction() {
+    const actions = [];
+
+    if (userTools.includes("hubspot")) {
+        actions.push(
+            "In HubSpot, compare Lifecycle stage and lead source. Look for campaigns or channels generating lots of leads but relatively few MQLs."
+        );
+    }
+
+    if (userTools.includes("salesforce")) {
+        actions.push(
+            "In Salesforce, review lead status, source and qualification fields to identify where lower-quality leads are entering the funnel."
+        );
+    }
+
+    if (actions.length === 0) {
+        return "Review your lead sources and qualification criteria to identify where lower-quality leads are entering the funnel.";
+    }
+
+    return actions.join(" ");
+}
+
+
 analyseFunnelButton.addEventListener("click", function () {
     const spend = getInputValue("spend");
     const impressions = getInputValue("impressions");
@@ -768,10 +791,21 @@ analyseFunnelButton.addEventListener("click", function () {
                     `CTR: ${ctr.toFixed(1)}%. Investigate creative and audience performance. ${ctrAction}`;
             }
 
-            
+
     } else if (leadToMql !== null && leadToMql < 30) {
+        const getLeadToMqlAction = getLeadToMqlAction();
+
+        if (userExperience === "beginner") {
         funnelInsight.textContent =
-        "Lead qualification looks like a possible bottleneck. Review lead quality and qualification criteria.";
+                `Your Lead to MQL rate is ${leadToMql.toFixed(1)}%. This means about ${leadToMql.toFixed(1)} out of every 100 leads are becoming marketing-qualified leads. GrowthScope has flagged lead qualification as an area to investigate. ${leadToMqlAction}`;
+            } else if (userExperience === "comfortable") {
+                funnelInsight.textContent =
+                    `Your Lead to MQL rate is ${leadToMql.toFixed(1)}%. Lead qualification looks like a possible bottleneck. ${leadToMqlAction}`;
+            } else {
+                funnelInsight.textContent =
+                    `Lead to MQL: ${leadToMql.toFixed(1)}%. Investigate lead quality and qualification. ${leadToMqlAction}`;
+            }
+            
     } else if (roas !== null && roas < 2) {
         funnelInsight.textContent = 
         "Your return on ad spend is relatively low. Review campaign costs and conversion performance.";
