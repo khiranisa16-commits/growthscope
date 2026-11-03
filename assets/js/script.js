@@ -795,6 +795,17 @@ analyseFunnelButton.addEventListener("click", function () {
     const cac = calculateCost(spend, customers);
     const roas = calculateCost(revenue, spend);
 
+    const availableResults = [
+        ctr,
+        cpc,
+        cpl,
+        leadToMql,
+        cac,
+        roas
+    ].filter(function (result) {
+        return result !== null;
+    }).length;
+
     showResult("result-ctr", ctr, "percentage");
     showResult("result-cpc", cpc, "currency"); 
     showResult("result-cpl", cpl, "currency");
@@ -803,54 +814,131 @@ analyseFunnelButton.addEventListener("click", function () {
     showResult("result-roas", roas, "ratio");
 
     funnelInsight.className = "data-check feedback-info";
+    const insights = [];
+    const contextInsights = [];
 
     if (ctr !== null && ctr < 1) {
         const ctrAction = getCtrAction();
-        
-        if (userExperience === "beginner") {
-        funnelInsight.textContent = 
-            `Your CTR is ${ctr.toFixed(1)}%. This means about ${ctr.toFixed(1)} people clicked for every 100 ad impressions. GrowthScope has flagged this as an area to investigate. ${ctrAction}`;
-            } else if (userExperience === "comfortable") {
-                funnelInsight.textContent =
-                    `Your CTR is ${ctr.toFixed(1)}%. GrowthScope has flagged this as an area to investigate. ${ctrAction}`;
-            } else {
-                funnelInsight.textContent =
-                    `CTR: ${ctr.toFixed(1)}%. Investigate creative and audience performance. ${ctrAction}`;
-            }
-
-
-    } else if (leadToMql !== null && leadToMql < 30) {
-        const leadToMqlAction = getLeadToMqlAction();
+        let ctrInsight = "";
 
         if (userExperience === "beginner") {
-        funnelInsight.textContent =
-                `Your Lead to MQL rate is ${leadToMql.toFixed(1)}%. This means about ${leadToMql.toFixed(1)} out of every 100 leads are becoming marketing-qualified leads. GrowthScope has flagged lead qualification as an area to investigate. ${leadToMqlAction}`;
-            } else if (userExperience === "comfortable") {
-                funnelInsight.textContent =
-                    `Your Lead to MQL rate is ${leadToMql.toFixed(1)}%. Lead qualification looks like a possible bottleneck. ${leadToMqlAction}`;
-            } else {
-                funnelInsight.textContent =
-                    `Lead to MQL: ${leadToMql.toFixed(1)}%. Investigate lead quality and qualification. ${leadToMqlAction}`;
-            }
+            ctrInsight =
+                `CTR: ${ctr.toFixed(1)}%. This means about ${ctr.toFixed(1)} people clicked for every 100 ad impressions. GrowthScope has flagged this as an area to investigate. ${ctrAction}`;
+        } else if (userExperience === "comfortable") {
+            ctrInsight =
+                `CTR: ${ctr.toFixed(1)}%. GrowthScope has flagged this as an area to investigate. ${ctrAction}`;
+        } else {
+            ctrInsight =
+                `CTR: ${ctr.toFixed(1)}%. Investigate creative and audience performance. ${ctrAction}`;
+        }
 
-    } else if (roas !== null && roas < 2) {
-            const roasAction = getRoasAction();
-
-            if (userExperience === "beginner") {
-                funnelInsight.textContent =
-                    `Your ROAS is ${roas.toFixed(2)}×. This means every £1 of ad spend generated about £${roas.toFixed(2)} in revenue. GrowthScope has flagged commercial return as an area to investigate. ${roasAction}`;
-            } else if (userExperience === "comfortable") {
-                funnelInsight.textContent =
-                    `Your ROAS is ${roas.toFixed(2)}×. Commercial return looks like an area to investigate. ${roasAction}`;
-            } else {
-                funnelInsight.textContent =
-                    `ROAS: ${roas.toFixed(2)}×. Investigate campaign efficiency and revenue contribution. ${roasAction}`;
-            }
-            
-    } else {
-        funnelInsight.textContent = 
-        "No major issue stands out from the available data. Review each stage for smaller optimisation opportunities.";
+        insights.push(ctrInsight);
     }
+
+
+    if (leadToMql !== null && leadToMql < 30) {
+        const leadToMqlAction = getLeadToMqlAction();
+        let leadToMqlInsight = "";
+
+        if (userExperience === "beginner") {
+            leadToMqlInsight =
+                `Lead to MQL: ${leadToMql.toFixed(1)}%. This means about ${leadToMql.toFixed(1)} out of every 100 leads are becoming marketing-qualified leads. GrowthScope has flagged lead qualification as an area to investigate. ${leadToMqlAction}`;
+        } else if (userExperience === "comfortable") {
+            leadToMqlInsight =
+                `Lead to MQL: ${leadToMql.toFixed(1)}%. Lead qualification looks like a possible bottleneck. ${leadToMqlAction}`;
+        } else {
+            leadToMqlInsight =
+                `Lead to MQL: ${leadToMql.toFixed(1)}%. Investigate lead quality and qualification. ${leadToMqlAction}`;
+        }
+
+        insights.push(leadToMqlInsight);
+    }
+
+    if (roas !== null && roas < 2) {
+        const roasAction = getRoasAction();
+        let roasInsight = "";
+
+        if (userExperience === "beginner") {
+            roasInsight =
+                `ROAS: ${roas.toFixed(2)}×. This means every £1 of ad spend generated about £${roas.toFixed(2)} in revenue. GrowthScope has flagged commercial return as an area to investigate. ${roasAction}`;
+        } else if (userExperience === "comfortable") {
+            roasInsight =
+                `ROAS: ${roas.toFixed(2)}×. Commercial return looks like an area to investigate. ${roasAction}`;
+        } else {
+            roasInsight =
+                `ROAS: ${roas.toFixed(2)}×. Investigate campaign efficiency and revenue contribution. ${roasAction}`;
+        }
+
+        insights.push(roasInsight);
+    }
+
+    if (cpc !== null) {
+        contextInsights.push(
+            `CPC: £${cpc.toFixed(2)}. This is how much you are spending for each click. GrowthScope does not label this as good or bad because an acceptable CPC depends on your market and campaign goals. Compare CPC across campaigns and channels to identify where traffic is costing more.`
+        );
+        }
+
+    if (cpl !== null) {
+        contextInsights.push(
+            `CPL: £${cpl.toFixed(2)}. This is how much you are spending to generate each lead. GrowthScope does not label this as good or bad because an acceptable CPL depends on your business model and lead value. Compare CPL across campaigns, channels and lead sources to see where leads are costing more.`
+        );
+        }
+
+    if (cac !== null) {
+        contextInsights.push(
+            `CAC: £${cac.toFixed(2)}. This is how much you are spending to acquire each customer. GrowthScope does not label this as good or bad because a sustainable CAC depends on customer value and profitability. Compare CAC with average customer revenue or lifetime value before deciding whether acquisition is efficient.`
+        );
+    }
+            
+    if (availableResults <= 1) {
+        funnelInsight.textContent =
+            "There isn't enough connected funnel data to identify a reliable bottleneck yet. Add more related metrics to unlock more analysis.";
+
+    } else {
+        let insightHtml = "";
+
+        if (insights.length > 0) {
+            insightHtml += `
+                <div class="insight-section">
+                    <strong>
+                        ${insights.length} area${insights.length > 1 ? "s" : ""} to investigate
+                    </strong>
+
+                    <ul>
+                        ${insights.map(function (insight) {
+                            return `<li>${insight}</li>`;
+                        }).join("")}
+                    </ul>
+                </div>
+            `;
+        } else {
+            insightHtml += `
+                <div class="insight-section">
+                    <strong>No major issue detected</strong>
+                    <p>
+                        No major issue stands out from the metrics GrowthScope can currently evaluate.
+                    </p>
+                </div>
+            `;
+        }
+
+        if (contextInsights.length > 0) {
+            insightHtml += `
+                <div class="insight-section">
+                    <strong>Cost efficiency context</strong>
+
+                    <ul>
+                        ${contextInsights.map(function (insight) {
+                            return `<li>${insight}</li>`;
+                        }).join("")}
+                    </ul>
+                </div>
+            `;
+        }
+
+        funnelInsight.innerHTML = insightHtml;
+    }
+
     reviewStep.hidden = true;
     resultsStep.hidden = false;
 

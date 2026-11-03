@@ -908,6 +908,31 @@ legend {
     transform: translateY(-50%);
 }
 
+.insight-section + .insight-section {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #ddd6fe;
+}
+
+.insight-section > strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.insight-section p {
+    margin: 0;
+}
+
+.insight-section ul {
+    margin: 0.5rem 0 0;
+    padding-left: 1.25rem;
+}
+
+.insight-section li + li {
+    margin-top: 0.75rem;
+}
+
 .site-footer {
     padding: 2rem;
     border-top: 1px solid #e5e7eb;
