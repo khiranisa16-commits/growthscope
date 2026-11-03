@@ -402,7 +402,7 @@ setupForm.addEventListener("submit", function (event) {
 
     if (!selectedExperience) {
         experienceOptions.classList.remove("has-error");
-        
+
         setupFeedback.textContent = 
         "Choose how familiar you are with marketing metrics before continuing.";
 
@@ -498,6 +498,13 @@ toolGuidance.hidden = selectedTools.length === 0;
     });  
 });
 
+document.querySelectorAll('input[name="experience"]').forEach(function (input) {
+    input.addEventListener("change", function () {
+        setupFeedback.textContent = "";
+        setupFeedback.className = "data-check";
+        experienceOptions.classList.remove("has-error");
+    });
+});
 
 backToSetupButton.addEventListener("click", function() {
     funnelStep.hidden = true;

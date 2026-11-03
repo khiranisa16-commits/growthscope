@@ -422,6 +422,17 @@ legend {
     margin-top: 1rem;
 }
 
+.experience-options.has-error {
+    padding: 0.75rem;
+    border: 2px solid #ef4444;
+    border-radius: 1rem;
+    background: #fff7f7;
+}
+
+.experience-options.has-error .option-card {
+    border-color: #fecaca;
+}
+
 .option-card {
     position: relative;
     display: grid;
