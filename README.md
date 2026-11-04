@@ -242,3 +242,15 @@ Git and GitHub were used throughout development. Changes were committed progress
 
 Detailed testing evidence is available in [`documentation/testing.md`](documentation/testing.md).
 
+## Credits
+
+- All HTML, CSS and JavaScript for GrowthScope was written specifically for this project.
+- No external JavaScript or CSS libraries were used.
+- Figma was used to create the project wireframes.
+- Google Ads, Meta Ads, LinkedIn Ads, Google Analytics, HubSpot and Salesforce names and logos are used only to identify the marketing platforms referenced within the application. Their respective trademarks and branding remain the property of their owners.
+
+## Acknowledgements
+
+GrowthScope was created as part of my Level 5 Web Development course.
+
+The project was developed through an iterative process of planning, coding, testing, debugging and refinement, with feedback from the course used to improve the quality of the final application and its documentation.
