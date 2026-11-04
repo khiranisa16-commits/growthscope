@@ -61,7 +61,7 @@ The following manual test cases were completed to check the main user journey, v
 
 - Submitting the Funnel Data form with all fields empty was blocked.
 - The message "Enter at least one funnel metric before continuing" was displayed.
-![Funnel form blocking submission when no metrics are entered](screenshots/functional/funnel-validation-error.png)
+![Funnel form blocking submission when no metrics are entered](screenshots/functional/funnel-empty-validation.png)
 
 - Invalid funnel relationships were tested.
 - When clicks were higher than impressions, GrowthScope displayed a warning on the Review step.
@@ -206,7 +206,7 @@ The full GrowthScope journey was tested using keyboard controls only.
 
 Automated testing was used alongside manual keyboard testing because automated tools cannot detect every accessibility issue.
 
-![Visible keyboard focus state during manual accessibility testing](screenshots/accessibility/keyboard-focus.png)
+![Visible keyboard focus state during manual accessibility testing](screenshots/accessibility/keyboard-focus-visible.png)
 
 ## Browser Testing
 
