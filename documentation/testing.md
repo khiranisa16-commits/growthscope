@@ -232,6 +232,8 @@ The setup form originally allowed progression problems when no experience level 
 **Fix:**  
 Validation was added to prevent progression until an experience level is selected. A visible error state and feedback message were added, and the first experience option receives focus.
 
+![Setup form validation error state during testing](screenshots/functional/setup-validation-error.png)
+
 ### Step navigation
 
 **Issue:**  
@@ -248,6 +250,8 @@ Users could attempt to continue without entering any funnel data.
 **Fix:**  
 Validation was added to require at least one funnel metric before continuing.
 
+![Funnel form correctly blocking progression when no data was entered](screenshots/functional/funnel-validation-error.png)
+
 ### Inconsistent funnel data
 
 **Issue:**  
@@ -255,6 +259,8 @@ Some combinations of funnel data could be logically inconsistent, such as clicks
 
 **Fix:**  
 GrowthScope now checks for inconsistent relationships and displays warning messages on the Review step without unnecessarily blocking the user.
+
+![Data-quality warning displayed when clicks exceeded impressions](screenshots/functional/inconsistent-data-warning.png)
 
 ### Multiple diagnostic insights
 
@@ -269,20 +275,24 @@ The diagnostic logic was changed to evaluate issues independently and store mult
 **Issue:**  
 A malformed template literal in the personalised insight renderer caused a JavaScript syntax error and prevented the application from running.
 
+![JavaScript syntax error identified during personalised insight development](screenshots/bugs/javascript-syntax-error-before-fix.png)
+
 **Fix:**  
 The insight rendering block was corrected and retested. The full application flow then worked without JavaScript parse errors.
 
-![JavaScript syntax error identified during personalised insight development](screenshots/bugs/javascript-syntax-error-before-fix.png)
+![Personalised insights working after the renderer was corrected](screenshots/functional/multiple-insights-pass.png)
 
 ### HTML structure
 
 **Issue:**  
 HTML validation identified an unclosed `div` in the Funnel Data section.
 
+![HTML validator identifying the unclosed div before it was corrected](screenshots/bugs/html-unclosed-div-before-fix.png)
+
 **Fix:**  
 The missing closing tag was added and the HTML was revalidated successfully with no errors or warnings.
 
-![HTML validator identifying the unclosed div before it was corrected](screenshots/bugs/html-unclosed-div-before-fix.png)
+![HTML validation passing after the missing closing tag was added](screenshots/validation/html-validation-pass.png)
 
 ### CSS validation
 
