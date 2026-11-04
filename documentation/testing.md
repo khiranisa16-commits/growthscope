@@ -220,7 +220,7 @@ GrowthScope was tested in both Google Chrome and Safari.
 - Back navigation worked.
 - Images and responsive layouts displayed correctly.
 
-![GrowthScope tested successfully in Google Chrome](screenshots/browser/chrome-browser-test.png)
+![GrowthScope tested successfully in Google Chrome](screenshots/browser/chrome-browser-pass.png)
 
 ### Safari
 
@@ -272,7 +272,7 @@ Users could attempt to continue without entering any funnel data.
 **Fix:**  
 Validation was added to require at least one funnel metric before continuing.
 
-![Funnel form correctly blocking progression when no data was entered](screenshots/functional/funnel-validation-error.png)
+![Funnel form correctly blocking progression when no data was entered](screenshots/functional/funnel-empty-validation.png)
 
 ### Inconsistent funnel data
 
