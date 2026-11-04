@@ -823,13 +823,13 @@ analyseFunnelButton.addEventListener("click", function () {
 
         if (userExperience === "beginner") {
             ctrInsight =
-                `CTR: ${ctr.toFixed(1)}%. This means about ${ctr.toFixed(1)} people clicked for every 100 ad impressions. GrowthScope has flagged this as an area to investigate. ${ctrAction}`;
+                `CTR: ${ctr.toFixed(1)}%. This means about ${ctr.toFixed(1)} people clicked for every 100 ad impressions. GrowthScope has flagged this as an area to investigate.`;
         } else if (userExperience === "comfortable") {
             ctrInsight =
-                `CTR: ${ctr.toFixed(1)}%. GrowthScope has flagged this as an area to investigate. ${ctrAction}`;
+                `CTR: ${ctr.toFixed(1)}%. GrowthScope has flagged this as an area to investigate.`;
         } else {
             ctrInsight =
-                `CTR: ${ctr.toFixed(1)}%. Investigate creative and audience performance. ${ctrAction}`;
+                `CTR: ${ctr.toFixed(1)}%. Investigate creative and audience performance.`;
         }
 
         insights.push({
@@ -847,13 +847,13 @@ analyseFunnelButton.addEventListener("click", function () {
 
         if (userExperience === "beginner") {
             leadToMqlInsight =
-                `Lead to MQL: ${leadToMql.toFixed(1)}%. This means about ${leadToMql.toFixed(1)} out of every 100 leads are becoming marketing-qualified leads. GrowthScope has flagged lead qualification as an area to investigate. ${leadToMqlAction}`;
+                `Lead to MQL: ${leadToMql.toFixed(1)}%. This means about ${leadToMql.toFixed(1)} out of every 100 leads are becoming marketing-qualified leads. GrowthScope has flagged lead qualification as an area to investigate.`;
         } else if (userExperience === "comfortable") {
             leadToMqlInsight =
-                `Lead to MQL: ${leadToMql.toFixed(1)}%. Lead qualification looks like a possible bottleneck. ${leadToMqlAction}`;
+                `Lead to MQL: ${leadToMql.toFixed(1)}%. Lead qualification looks like a possible bottleneck.`;
         } else {
             leadToMqlInsight =
-                `Lead to MQL: ${leadToMql.toFixed(1)}%. Investigate lead quality and qualification. ${leadToMqlAction}`;
+                `Lead to MQL: ${leadToMql.toFixed(1)}%. Investigate lead quality and qualification.`;
         }
 
         insights.push({
@@ -862,6 +862,7 @@ analyseFunnelButton.addEventListener("click", function () {
         message: leadToMqlInsight,
         action: leadToMqlAction
     });
+    }   
 
     if (roas !== null && roas < 2) {
         const roasAction = getRoasAction();
@@ -869,15 +870,15 @@ analyseFunnelButton.addEventListener("click", function () {
 
         if (userExperience === "beginner") {
             roasInsight =
-                `ROAS: ${roas.toFixed(2)}×. This means every £1 of ad spend generated about £${roas.toFixed(2)} in revenue. GrowthScope has flagged commercial return as an area to investigate. ${roasAction}`;
+                `ROAS: ${roas.toFixed(2)}×. This means every £1 of ad spend generated about £${roas.toFixed(2)} in revenue. GrowthScope has flagged commercial return as an area to investigate.`;
         } else if (userExperience === "comfortable") {
             roasInsight =
-                `ROAS: ${roas.toFixed(2)}×. Commercial return looks like an area to investigate. ${roasAction}`;
+                `ROAS: ${roas.toFixed(2)}×. Commercial return looks like an area to investigate.`;
         } else {
             roasInsight =
-                `ROAS: ${roas.toFixed(2)}×. Investigate campaign efficiency and revenue contribution. ${roasAction}`;
+                `ROAS: ${roas.toFixed(2)}×. Investigate campaign efficiency and revenue contribution.`;
         }
-
+        
         insights.push({
         title: "ROAS",
         value: `${roas.toFixed(2)}×`,
@@ -928,6 +929,9 @@ analyseFunnelButton.addEventListener("click", function () {
                         ${insights.length} area${insights.length > 1 ? "s" : ""} to investigate
                     </strong>
 
+                    <ul>
+                        ${insights.map(function (insight) {
+
                    if (typeof insight === "string") {
                         return `<li>${insight}</li>`;
                     }
@@ -949,6 +953,8 @@ analyseFunnelButton.addEventListener("click", function () {
                             </div>
                         </li>
                     `;
+                        }).join("")}
+                    </ul>
         } else {
             insightHtml += `
                 <div class="insight-section">
