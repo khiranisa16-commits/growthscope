@@ -161,6 +161,18 @@ GrowthScope was developed iteratively, with functionality added and tested in st
 
 GrowthScope was tested throughout development for functionality, validation, responsiveness, accessibility and browser compatibility.
 
+### Testing approach
+
+Both manual and automated testing approaches can be used when developing a web application.
+
+**Manual testing** involves a person interacting with the application and checking whether it behaves as expected. It is particularly useful for testing user journeys, usability, keyboard interaction, responsive layouts and behaviour across different browsers and devices.
+
+**Automated testing** uses software tools or scripts to perform checks automatically. It is useful for repeatable checks such as code validation, syntax checking and automated accessibility audits.
+
+GrowthScope primarily used manual testing because many of its key requirements involve user interaction, conditional guidance and responsive behaviour. Automated tools were also used where appropriate, including the Nu HTML Checker, W3C CSS Validator, JSHint and Lighthouse.
+
+The main user journey was manually tested from Setup through Funnel Data, Review and Results, while validation tools were used alongside this process to identify code and accessibility issues.
+
 Testing included:
 
 - HTML validation using the Nu HTML Checker;
