@@ -747,7 +747,7 @@ legend {
 }
 
 .beginner-guidance-decor {
-    margin-top: 1.5rem -1.75rem -1.75rem;
+    margin: 1.5rem -1.75rem -1.75rem;
     overflow: hidden;
     border-radius: 0 0 1.25rem 1.25rem;
 }
