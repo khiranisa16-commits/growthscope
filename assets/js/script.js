@@ -823,7 +823,7 @@ analyseFunnelButton.addEventListener("click", function () {
 
         if (userExperience === "beginner") {
             ctrInsight =
-                `CTR: ${ctr.toFixed(1)}%. This means about ${ctr.toFixed(1)} people clicked for every 100 ad impressions. GrowthScope has flagged this as an area to investigate.`;
+                `About ${ctr.toFixed(1)} clicks were generated for every 100 ad impressions. GrowthScope has flagged this as an area to investigate.`;
         } else if (userExperience === "comfortable") {
             ctrInsight =
                 `CTR: ${ctr.toFixed(1)}%. GrowthScope has flagged this as an area to investigate.`;
@@ -847,7 +847,7 @@ analyseFunnelButton.addEventListener("click", function () {
 
         if (userExperience === "beginner") {
             leadToMqlInsight =
-                `Lead to MQL: ${leadToMql.toFixed(1)}%. This means about ${leadToMql.toFixed(1)} out of every 100 leads are becoming marketing-qualified leads. GrowthScope has flagged lead qualification as an area to investigate.`;
+                `About ${leadToMql.toFixed(1)} out of every 100 leads are becoming marketing-qualified leads. GrowthScope has flagged lead qualification as an area to investigate.`;
         } else if (userExperience === "comfortable") {
             leadToMqlInsight =
                 `Lead to MQL: ${leadToMql.toFixed(1)}%. Lead qualification looks like a possible bottleneck.`;
@@ -870,7 +870,7 @@ analyseFunnelButton.addEventListener("click", function () {
 
         if (userExperience === "beginner") {
             roasInsight =
-                `ROAS: ${roas.toFixed(2)}×. This means every £1 of ad spend generated about £${roas.toFixed(2)} in revenue. GrowthScope has flagged commercial return as an area to investigate.`;
+                `Every £1 of ad spend generated about £${roas.toFixed(2)} in revenue. GrowthScope has flagged commercial return as an area to investigate.`;
         } else if (userExperience === "comfortable") {
             roasInsight =
                 `ROAS: ${roas.toFixed(2)}×. Commercial return looks like an area to investigate.`;
