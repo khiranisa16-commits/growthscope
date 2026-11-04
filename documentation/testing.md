@@ -9,6 +9,8 @@ The HTML was tested using the Nu HTML Checker.
 - The missing closing tag was added and the document was tested again.
 - Final result: no errors or warnings.
 
+![HTML validation showing no errors or warnings](screenshots/validation/html-validation-pass.png)
+
 ### CSS
 
 The CSS was tested using the W3C CSS Validator.
@@ -16,12 +18,16 @@ The CSS was tested using the W3C CSS Validator.
 - An invalid margin declaration was corrected during development.
 - Final result: no CSS errors and the stylesheet successfully validated.
 
+![CSS validation showing no errors](screenshots/validation/css-validation-pass.png)
+
 ### JavaScript
 
 JavaScript was tested using JSHint.
 
 - JSHint was configured to recognise ES6 syntax during testing because GrowthScope uses features such as `const`, `let` and template literals.
 - After configuring the checker for ES6, no JSHint warnings remained.
+
+![JSHint results showing no remaining warnings](screenshots/validation/jshint-pass.png)
 
 ## Functional Testing
 
@@ -185,3 +191,69 @@ GrowthScope was tested in both Google Chrome and Safari.
 No browser-specific blocking issues were identified.
 
 ## Bugs and Fixes
+
+Several issues were identified during development and testing and were corrected before final submission.
+
+### Setup form validation
+
+**Issue:**  
+The setup form originally allowed progression problems when no experience level was selected.
+
+**Fix:**  
+Validation was added to prevent progression until an experience level is selected. A visible error state and feedback message were added, and the first experience option receives focus.
+
+### Step navigation
+
+**Issue:**  
+Earlier versions of the multi-step flow did not always move correctly between Setup, Funnel Data, Review and Results.
+
+**Fix:**  
+The JavaScript event handling and hidden states were corrected so each step appears and hides at the correct point in the journey.
+
+### Funnel data validation
+
+**Issue:**  
+Users could attempt to continue without entering any funnel data.
+
+**Fix:**  
+Validation was added to require at least one funnel metric before continuing.
+
+### Inconsistent funnel data
+
+**Issue:**  
+Some combinations of funnel data could be logically inconsistent, such as clicks being higher than impressions or customers being higher than opportunities.
+
+**Fix:**  
+GrowthScope now checks for inconsistent relationships and displays warning messages on the Review step without unnecessarily blocking the user.
+
+### Multiple diagnostic insights
+
+**Issue:**  
+Earlier diagnostic logic could stop after identifying one funnel issue, which meant other relevant problems were not displayed.
+
+**Fix:**  
+The diagnostic logic was changed to evaluate issues independently and store multiple insights so GrowthScope can display all relevant areas to investigate.
+
+### Personalised insight rendering
+
+**Issue:**  
+A malformed template literal in the personalised insight renderer caused a JavaScript syntax error and prevented the application from running.
+
+**Fix:**  
+The insight rendering block was corrected and retested. The full application flow then worked without JavaScript parse errors.
+
+### HTML structure
+
+**Issue:**  
+HTML validation identified an unclosed `div` in the Funnel Data section.
+
+**Fix:**  
+The missing closing tag was added and the HTML was revalidated successfully with no errors or warnings.
+
+### CSS validation
+
+**Issue:**  
+A margin declaration in the beginner guidance styling used invalid syntax.
+
+**Fix:**  
+The margin declaration was corrected and the stylesheet was successfully validated.
