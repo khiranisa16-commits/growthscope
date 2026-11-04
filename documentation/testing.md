@@ -146,7 +146,7 @@ Tested at approximately 1280px width.
 - Setup, Funnel Data, Review and Results layouts remained aligned.
 - No horizontal overflow was identified.
 
-![Desktop layout tested at approximately 1280px](screenshots/responsive/desktop-responsive-1280.png)
+![Desktop layout tested at approximately 1280px](screenshots/responsive/desktop-home-1280.png)
 
 ### Tablet
 
@@ -158,7 +158,7 @@ Tested at approximately 768px width.
 - Results cards adapted to two columns.
 - Diagnostic and cost-efficiency content remained readable without overflow.
 
-![Tablet layout tested at approximately 768px](screenshots/responsive/tablet-responsive-768.png)
+![Tablet layout tested at approximately 768px](screenshots/responsive/tablet-setup-768.png)
 
 ### Mobile
 
@@ -173,7 +173,7 @@ Tested at approximately 390px width.
 - Long recommendation text wrapped correctly.
 - Buttons remained visible and usable.
 
-![Mobile layout tested at approximately 390px](screenshots/responsive/mobile-responsive-390.png)
+![Mobile layout tested at approximately 390px](screenshots/responsive/mobile-home-390.png)
 
 ![Mobile Results and personalised insight layout at approximately 390px](screenshots/responsive/mobile-results-insights-390.png)
 
