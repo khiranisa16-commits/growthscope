@@ -77,29 +77,29 @@ The application was wireframed before development to plan the layout, interactio
 
 #### User setup
 
-![GrowthScope desktop setup wireframe](documentation/wireframes/Desktop%20Wireframe.png)
+![GrowthScope desktop setup wireframe](documentation/wireframes/desktop-setup.png)
 
 #### Traffic and acquisition data
 
-![GrowthScope traffic and acquisition wireframe](documentation/wireframes/Desktop%20Wireframe%20-%20Funnel%20Data.png)
+![GrowthScope traffic and acquisition wireframe](documentation/wireframes/desktop-funnel-traffic.png)
 
 #### Leads and qualification data
 
-![GrowthScope leads and qualification wireframe](documentation/wireframes/Desktop%20Wireframe%20-%20Funnel%20Data%20%281%29.png)
+![GrowthScope leads and qualification wireframe](documentation/wireframes/desktop-funnel-leads.png)
 
 #### Review
 
-![GrowthScope review wireframe](documentation/wireframes/Desktop%20Wireframe%20-%20Funnel%20Data%20%282%29.png)
+![GrowthScope review wireframe](documentation/wireframes/desktop-review.png)
 
 #### Results
 
-![GrowthScope results wireframe](documentation/wireframes/Desktop%20Wireframe%20-%20Funnel%20Data%20%283%29.png)
+![GrowthScope results wireframe](documentation/wireframes/desktop-results.png)
 
 #### Early concept: opportunities and scenario planning
 
 An earlier wireframe explored adding scenario-planning functionality so users could model potential funnel improvements. During development, this was removed from the final project scope so the application could focus on reliable funnel analysis, validation and personalised diagnostic guidance.
 
-![Early GrowthScope scenario-planning wireframe](documentation/wireframes/Desktop%20Wireframe%20-%20Opportunities.png)
+![Early GrowthScope scenario-planning wireframe](documentation/wireframes/desktop-opportunities-concept.png)
 
 ### Responsive design
 
@@ -107,27 +107,27 @@ The interface was also planned for tablet and mobile devices. On smaller screens
 
 #### Tablet setup
 
-![GrowthScope tablet setup wireframe](documentation/wireframes/Tablet%20Wireframe%20-%20Setup.png)
+![GrowthScope tablet setup wireframe](documentation/wireframes/tablet-setup.png)
 
 #### Tablet funnel data
 
-![GrowthScope tablet funnel data wireframe](documentation/wireframes/Tablet%20Wireframe%20-%20Funnel%20Data.png)
+![GrowthScope tablet funnel data wireframe](documentation/wireframes/tablet-funnel-data.png)
 
 #### Tablet results
 
-![GrowthScope tablet results wireframe](documentation/wireframes/Tablet%20Wireframe%20-%20Results.png)
+![GrowthScope tablet results wireframe](documentation/wireframes/tablet-setup.png)
 
 #### Mobile setup
 
-![GrowthScope mobile setup wireframe](documentation/wireframes/Mobile%20Wireframe%20-%20Setup.png)
+![GrowthScope mobile setup wireframe](documentation/wireframes/mobile-setup.png)
 
 #### Mobile funnel data
 
-![GrowthScope mobile funnel data wireframe](documentation/wireframes/Mobile%20Wireframe%20-%20Funnel%20Data.png)
+![GrowthScope mobile funnel data wireframe](documentation/wireframes/mobile-funnel-data.png)
 
 #### Mobile results
 
-![GrowthScope mobile results wireframe](documentation/wireframes/Mobile%20Wireframe%20-%20Results.png)
+![GrowthScope mobile results wireframe](documentation/wireframes/mobile-results.png)
 
 ## Tools and Technologies
 
