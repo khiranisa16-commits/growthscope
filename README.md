@@ -195,6 +195,12 @@ Full test procedures, results, screenshots and debugging evidence are documented
 
 GrowthScope is deployed using GitHub Pages.
 
+### Version control evidence
+
+Git and GitHub were used throughout development to track changes and document progress. The commit history shows the application being built iteratively, including functionality, debugging, testing, responsive improvements and documentation updates.
+
+![GrowthScope GitHub commit history](documentation/screenshots/version-control/commit-history.png)
+
 ### Deployment process
 
 The application was deployed from the project repository by:
