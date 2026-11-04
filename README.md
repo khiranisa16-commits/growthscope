@@ -179,6 +179,33 @@ All final validation checks passed, and the deployed application achieved a Ligh
 
 Full test procedures, results, screenshots and debugging evidence are documented in [`documentation/testing.md`](documentation/testing.md).
 
+## Deployment
+
+GrowthScope is deployed using GitHub Pages.
+
+### Deployment process
+
+The application was deployed from the project repository by:
+
+1. Pushing the completed project files to GitHub.
+2. Opening the repository settings.
+3. Selecting **Pages** from the repository settings.
+4. Choosing the main branch as the deployment source.
+5. Saving the GitHub Pages configuration.
+6. Opening the generated live site and testing the deployed version against the development version.
+
+The deployed application was checked to confirm that:
+
+- the latest HTML, CSS and JavaScript files were loading correctly;
+- the full Setup → Funnel Data → Review → Results journey worked;
+- responsive layouts matched the development version;
+- images and internal file paths loaded correctly; and
+- no blocking functionality issues were present.
+
+### Live application
+
+[View GrowthScope on GitHub Pages](https://khiranisa16-commits.github.io/growthscope/)
+
 ### Planning and design
 
 The project began with planning the user journey, required funnel metrics and the level of guidance needed for different users. Desktop, tablet and mobile wireframes were created in Figma before development.
@@ -214,3 +241,4 @@ The interface was tested at desktop, tablet and mobile widths and adjusted using
 Git and GitHub were used throughout development. Changes were committed progressively using descriptive commit messages so that the development process, fixes and testing work can be followed through the repository history.
 
 Detailed testing evidence is available in [`documentation/testing.md`](documentation/testing.md).
+
