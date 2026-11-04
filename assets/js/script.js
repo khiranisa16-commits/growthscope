@@ -893,7 +893,7 @@ analyseFunnelButton.addEventListener("click", function () {
             title: "CPC",
             value: `£${cpc.toFixed(2)}`,
             message:
-                "This is how much you are spending for each click. GrowthScope does not label this as good or bad because an acceptable CPC depends on your market and campaign goals. Compare CPC across campaigns and channels to identify where traffic is costing more."
+                "This is how much you are spending for each click. Compare CPC across campaigns and channels to identify where traffic is costing more."
         });
     }
 
@@ -902,7 +902,7 @@ analyseFunnelButton.addEventListener("click", function () {
             title: "CPL",
             value: `£${cpl.toFixed(2)}`,
             message:
-                "This is how much you are spending to generate each lead. GrowthScope does not label this as good or bad because an acceptable CPL depends on your business model and lead value. Compare CPL across campaigns, channels and lead sources to see where leads are costing more."
+                "This is how much you are spending to generate each lead. Compare CPL across campaigns, channels and lead sources to see where leads are costing more."
         });
     }
 
@@ -911,7 +911,7 @@ analyseFunnelButton.addEventListener("click", function () {
             title: "CAC",
             value: `£${cac.toFixed(2)}`,
             message:
-                "This is how much you are spending to acquire each customer. GrowthScope does not label this as good or bad because an acceptable CAC depends on your customer value and business model. Compare CAC against customer value and across campaigns or channels to identify expensive acquisition paths."
+                "This is how much you are spending to acquire each customer. Compare CAC against customer value and across campaigns or channels to identify expensive acquisition paths."
         });
     }
             
@@ -972,6 +972,13 @@ analyseFunnelButton.addEventListener("click", function () {
             insightHtml += `
                 <div class="insight-section">
                     <strong>Cost efficiency context</strong>
+
+                    <p class="context-intro">
+                        CPC, CPL and CAC show how much you are spending to generate clicks,
+                        leads and customers. GrowthScope does not label these as good or bad
+                        because acceptable costs depend on your market, business model,
+                        campaign goals and customer value.
+                    </p>
 
                     <ul>
                         ${contextInsights.map(function (insight) {

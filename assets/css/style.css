@@ -1034,7 +1034,17 @@ legend {
     margin: 0;
     color: #475569;
     font-size: 0.9rem;
+    font-weight: 400;
     line-height: 1.5;
+}
+
+.context-intro {
+    max-width: 720px;
+    margin: 0 0 1rem;
+    color: var(--muted-text);
+    font-size: 0.9rem;
+    font-weight: 400;
+    line-height: 1.55;
 }
 
 .site-footer {
