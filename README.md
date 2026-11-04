@@ -152,3 +152,43 @@ The interface was also planned for tablet and mobile devices. On smaller screens
 - **Lighthouse** — used to assess accessibility.
 - **Chrome DevTools** — used for responsive testing, debugging and console checks.
 - **Safari** — used for cross-browser testing.
+
+## Development Process
+
+GrowthScope was developed iteratively, with functionality added and tested in stages rather than building the full application at once.
+
+### Planning and design
+
+The project began with planning the user journey, required funnel metrics and the level of guidance needed for different users. Desktop, tablet and mobile wireframes were created in Figma before development.
+
+### Initial build
+
+The initial HTML and CSS established the page structure, branding, responsive layouts and the four main stages of the application: Setup, Funnel Data, Review and Results.
+
+### JavaScript functionality
+
+JavaScript was added progressively to:
+
+- move users between each stage of the application;
+- validate required selections and funnel data;
+- preserve entered information when navigating backwards;
+- calculate marketing KPIs;
+- display data-quality warnings;
+- change guidance based on experience level and selected marketing tools; and
+- generate personalised diagnostic results from the available funnel data.
+
+### Refinement and debugging
+
+Functionality was tested throughout development. Issues found during testing included step-navigation problems, validation behaviour, an unclosed HTML element and a JavaScript syntax error in the personalised insight renderer.
+
+These issues were corrected and retested before the final version was completed.
+
+### Responsive and accessibility improvements
+
+The interface was tested at desktop, tablet and mobile widths and adjusted using responsive CSS. Keyboard navigation, visible focus states and accessibility were also tested, with the deployed application achieving a Lighthouse accessibility score of 100.
+
+### Version control
+
+Git and GitHub were used throughout development. Changes were committed progressively using descriptive commit messages so that the development process, fixes and testing work can be followed through the repository history.
+
+Detailed testing evidence is available in [`documentation/testing.md`](documentation/testing.md).
