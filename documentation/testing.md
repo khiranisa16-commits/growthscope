@@ -41,13 +41,20 @@ The main GrowthScope user journey was tested from setup through to results.
 - After selecting an experience level and tools, the user could continue successfully.
 - Selected tools were carried through to the Funnel Data step.
 
+![Setup validation showing the required experience-level error](screenshots/functional/setup-validation-error.png)
+
 ### Funnel data validation
 
 - Submitting the Funnel Data form with all fields empty was blocked.
 - The message "Enter at least one funnel metric before continuing" was displayed.
+![Funnel form blocking submission when no metrics are entered](screenshots/functional/funnel-validation-error.png)
+
 - Invalid funnel relationships were tested.
 - When clicks were higher than impressions, GrowthScope displayed a warning on the Review step.
+![Review step warning when clicks are higher than impressions](screenshots/functional/inconsistent-data-warning.png)
+
 - The warning did not prevent the user from continuing because it was treated as a data-quality warning rather than a blocking error.
+
 
 ### Calculation testing
 
@@ -76,6 +83,8 @@ Expected and actual results:
 | CAC | £625.00 | £625.00 | Pass |
 | ROAS | 6.40× | 6.40× | Pass |
 
+![Calculation results matching the expected CTR, CPC, CPL, Lead to MQL, CAC and ROAS values](screenshots/functional/calculation-results-pass.png)
+
 ### Personalised insight testing
 
 A second dataset was used to trigger multiple diagnostic insights.
@@ -88,6 +97,8 @@ GrowthScope correctly identified two areas to investigate:
 - Lead to MQL
 - ROAS
 
+![GrowthScope identifying multiple personalised funnel insights](screenshots/functional/multiple-insights-pass.png)
+
 The recommendation text also changed based on the tools selected by the user.
 
 ### Insufficient data testing
@@ -97,6 +108,8 @@ Only Spend was entered and all other fields were left blank.
 - Metrics that could not be calculated displayed "Not available".
 - GrowthScope did not create unsupported recommendations.
 - A message explained that more connected funnel data was required before a reliable bottleneck could be identified.
+
+![Results state shown when there is not enough connected funnel data](screenshots/functional/insufficient-data-pass.png)
 
 ### Navigation and data retention
 
