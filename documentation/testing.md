@@ -177,6 +177,8 @@ A Lighthouse Accessibility audit was run against the deployed GrowthScope site.
 - Accessibility score: 100/100.
 - No automated accessibility failures were reported.
 
+![Lighthouse accessibility audit showing a score of 100](screenshots/accessibility/lighthouse-accessibility-100.png)
+
 ### Keyboard testing
 
 The full GrowthScope journey was tested using keyboard controls only.
@@ -189,6 +191,8 @@ The full GrowthScope journey was tested using keyboard controls only.
 - Keyboard navigation worked across Setup, Funnel Data, Review and Results.
 
 Automated testing was used alongside manual keyboard testing because automated tools cannot detect every accessibility issue.
+
+![Visible keyboard focus state during manual accessibility testing](screenshots/accessibility/keyboard-focus.png)
 
 ## Browser Testing
 
