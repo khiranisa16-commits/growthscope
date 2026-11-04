@@ -930,7 +930,7 @@ analyseFunnelButton.addEventListener("click", function () {
                     </strong>
 
                     <ul>
-                        ${insights.map(function (insight) {
+                ${insights.map(function (insight) {
 
                    if (typeof insight === "string") {
                         return `<li>${insight}</li>`;
@@ -955,6 +955,8 @@ analyseFunnelButton.addEventListener("click", function () {
                     `;
                         }).join("")}
                     </ul>
+                </div>
+             `;
         } else {
             insightHtml += `
                 <div class="insight-section">
