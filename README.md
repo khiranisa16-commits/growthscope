@@ -19,7 +19,7 @@ GrowthScope aims to make funnel analysis easier to understand by combining educa
 - As a user who does not have every funnel metric available, I want to analyse the data I do have so that missing information does not prevent me from using the application.
 - As a user entering campaign data, I want GrowthScope to warn me when my information is empty, invalid or potentially inconsistent so that I can correct mistakes before analysing it.
 - As a marketer, I want key marketing KPIs calculated automatically so that I do not have to calculate them manually.
-- As a marketer reviewing funnel performance, I want  I want GrowthScope to highlight areas that may need further investigation so that I know where to focus my analysis.
+- As a marketer reviewing funnel performance, I want GrowthScope to highlight areas that may need further investigation so that I know where to focus my analysis.
 - As a marketer using specific platforms, I want recommendations that reflect the tools I selected so that the guidance is relevant to my workflow.
 - As a beginner or experienced marketer, I want the amount of guidance to change based on my experience level so that the application feels appropriate to my needs.
 
@@ -41,8 +41,6 @@ The following screenshots show how the completed GrowthScope application meets t
 ![GrowthScope beginner and tool guidance](documentation/screenshots/responsive/tablet-funnel-768.png)
 
 ![GrowthScope personalised diagnostic results](documentation/screenshots/functional/multiple-insights-pass.png)
-
-## Features
 
 ## Features
 
@@ -97,9 +95,11 @@ The application was wireframed before development to plan the layout, interactio
 
 ![GrowthScope results wireframe](documentation/wireframes/Desktop%20Wireframe%20-%20Funnel%20Data%20%283%29.png)
 
-#### Opportunities and scenario planning
+#### Early concept: opportunities and scenario planning
 
-![GrowthScope opportunities wireframe](documentation/wireframes/Desktop%20Wireframe%20-%20Opportunities.png)
+An earlier wireframe explored adding scenario-planning functionality so users could model potential funnel improvements. During development, this was removed from the final project scope so the application could focus on reliable funnel analysis, validation and personalised diagnostic guidance.
+
+![Early GrowthScope scenario-planning wireframe](documentation/wireframes/Desktop%20Wireframe%20-%20Opportunities.png)
 
 ### Responsive design
 
@@ -128,3 +128,27 @@ The interface was also planned for tablet and mobile devices. On smaller screens
 #### Mobile results
 
 ![GrowthScope mobile results wireframe](documentation/wireframes/Mobile%20Wireframe%20-%20Results.png)
+
+## Tools and Technologies
+
+### Development
+
+- **HTML5** — used to structure the application and its four-step user journey.
+- **CSS3** — used for custom styling, responsive layouts, focus states and visual feedback.
+- **JavaScript (ES6)** — used for form validation, step navigation, calculations, personalised guidance and dynamic results.
+- **GitHub** — used for version control and project history.
+- **GitHub Pages** — used to deploy the live application.
+
+### Design and Planning
+
+- **Figma** — used to create desktop, tablet and mobile wireframes before development.
+- **VS Code Web** — used to write and manage the project files.
+
+### Testing and Validation
+
+- **Nu HTML Checker** — used to validate the HTML.
+- **W3C CSS Validator** — used to validate the stylesheet.
+- **JSHint** — used to check JavaScript quality and syntax.
+- **Lighthouse** — used to assess accessibility.
+- **Chrome DevTools** — used for responsive testing, debugging and console checks.
+- **Safari** — used for cross-browser testing.
