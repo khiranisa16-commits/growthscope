@@ -164,4 +164,24 @@ Automated testing was used alongside manual keyboard testing because automated t
 
 ## Browser Testing
 
+GrowthScope was tested in both Google Chrome and Safari.
+
+### Google Chrome
+
+- Homepage loaded correctly.
+- Setup, Funnel Data, Review and Results steps worked as expected.
+- Form validation and personalised results worked correctly.
+- Back navigation worked.
+- Images and responsive layouts displayed correctly.
+
+### Safari
+
+- Homepage loaded correctly.
+- The full analysis journey worked as expected.
+- Form controls and navigation behaved correctly.
+- Results displayed without layout issues.
+- Images loaded correctly.
+
+No browser-specific blocking issues were identified.
+
 ## Bugs and Fixes
