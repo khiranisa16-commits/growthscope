@@ -33,6 +33,20 @@ JavaScript was tested using JSHint.
 
 The main GrowthScope user journey was tested from setup through to results.
 
+### Manual test cases
+
+The following manual test cases were completed to check the main user journey, validation, calculations and personalised responses.
+
+| Test Case | Description | Test Data / Action | Expected Result | Actual Result | Status |
+| --- | --- | --- | --- | --- | --- |
+| TC01 | Setup validation | Click Continue without selecting an experience level | User remains on Setup and receives a clear validation message | Validation message displayed and progression blocked | Pass |
+| TC02 | Setup progression | Select New to this, Google Ads and HubSpot, then click Continue | Funnel Data step opens with selected tools and beginner guidance | Funnel Data opened with Google Ads and HubSpot shown and beginner guidance available | Pass |
+| TC03 | Empty funnel validation | Leave all funnel metrics blank and click Continue | User remains on Funnel Data and is asked to enter at least one metric | Submission blocked and error message displayed | Pass |
+| TC04 | Inconsistent data warning | Enter 1,000 impressions and 1,200 clicks | Review step displays a warning that clicks are higher than impressions | Correct warning displayed without blocking further analysis | Pass |
+| TC05 | Funnel calculations | Enter the complete calculation test dataset | CTR, CPC, CPL, Lead to MQL, CAC and ROAS match the expected values | All six calculated values matched the expected results | Pass |
+| TC06 | Personalised insights | Enter data producing Lead to MQL of 14.3% and ROAS of 1.20× | GrowthScope identifies both areas and displays tool-relevant recommendations | Both issues were displayed with personalised investigation guidance | Pass |
+| TC07 | Insufficient data | Enter only Spend and leave all other metrics blank | Unsupported metrics show Not available and no unsupported bottleneck is generated | Not available states and insufficient-data guidance displayed correctly | Pass |
+
 ### Setup validation
 
 - Clicking Continue without selecting an experience level prevented the user from moving to the next step.
