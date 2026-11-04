@@ -272,6 +272,8 @@ A malformed template literal in the personalised insight renderer caused a JavaS
 **Fix:**  
 The insight rendering block was corrected and retested. The full application flow then worked without JavaScript parse errors.
 
+![JavaScript syntax error identified during personalised insight development](screenshots/bugs/javascript-syntax-error-before-fix.png)
+
 ### HTML structure
 
 **Issue:**  
@@ -279,6 +281,8 @@ HTML validation identified an unclosed `div` in the Funnel Data section.
 
 **Fix:**  
 The missing closing tag was added and the HTML was revalidated successfully with no errors or warnings.
+
+![HTML validator identifying the unclosed div before it was corrected](screenshots/bugs/html-unclosed-div-before-fix.png)
 
 ### CSS validation
 
