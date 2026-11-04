@@ -42,18 +42,25 @@ The following screenshots show how the completed GrowthScope application meets t
 
 ![GrowthScope personalised diagnostic results](documentation/screenshots/functional/multiple-insights-pass.png)
 
-## Planned Features
+## Features
 
-- Guided funnel setup
-- Plain-English metric explanations
-- Guidance on where to find marketing data
-- Optional and partial data entry
-- Input validation and data-quality warnings
-- Automatic KPI calculations
-- Visual funnel analytics
-- Funnel-stage diagnostic guidance
-- Scenario modelling
-- Reset and start-again functionality
+## Features
+
+- Four-step analysis journey covering Setup, Funnel Data, Review and Results.
+- Experience-level selection that changes how much guidance is shown.
+- Marketing-tool selection for Google Ads, Meta Ads, LinkedIn Ads, GA4, HubSpot and Salesforce.
+- Plain-English metric definitions for less experienced users.
+- Tool-specific guidance explaining where common funnel metrics can be found.
+- Support for partial datasets so users can analyse the information they have available.
+- Validation that prevents completely empty funnel submissions.
+- Data-quality warnings for potentially inconsistent funnel relationships.
+- Review step allowing users to check their data before analysis.
+- Automatic calculation of CTR, CPC, CPL, Lead to MQL conversion rate, CAC and ROAS.
+- Personalised diagnostic insights that can identify multiple areas to investigate.
+- Recommendations adapted to the marketing tools selected by the user.
+- Cost-efficiency context for CPC, CPL and CAC without applying misleading universal benchmarks.
+- Responsive layouts for desktop, tablet and mobile devices.
+- Keyboard-accessible controls and visible focus states.
 
 ## UX Design
 
