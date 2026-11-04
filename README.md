@@ -1,10 +1,10 @@
 # GrowthScope
 
-GrowthScope is an interactive marketing funnel analysis and scenario-planning tool designed to help beginner and intermediate marketers understand their performance data.
+GrowthScope is an interactive marketing funnel analysis tool designed to help beginner and intermediate marketers understand their performance data.
 
-It guides users through the metrics they need, explains where common marketing data can be found, validates entered data, calculates key performace indicators and highlights funnel stages that may be worth investigating.
+It guides users through the metrics they need, explains where common marketing data can be found, validates entered data and calculates key performance indicators such as CTR, CPC, CPL, Lead to MQL conversion rate, CAC and ROAS.
 
-The application also allows users to model potential improvements and see how changes to one part of the funnel could affect later stages. 
+GrowthScope also analyses the available funnel data to identify areas that may need further investigation and provides personalised guidance based on the user's experience level and selected marketing tools. 
 
 ## Purpose
 
