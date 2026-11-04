@@ -23,6 +23,25 @@ GrowthScope aims to make funnel analysis easier to understand by combining educa
 - As a marketer using specific platforms, I want recommendations that reflect the tools I selected so that the guidance is relevant to my workflow.
 - As a beginner or experienced marketer, I want the amount of guidance to change based on my experience level so that the application feels appropriate to my needs.
 
+## User Story Evidence
+
+The following screenshots show how the completed GrowthScope application meets the main user stories.
+
+| User story | Feature evidence | Screenshot |
+| --- | --- | --- |
+| Understand what each metric means | Beginner guidance explains funnel metrics in plain English. | `documentation/screenshots/responsive/tablet-funnel-768.png` |
+| Find data in selected marketing tools | Tool-specific guidance is shown for platforms such as LinkedIn Ads and HubSpot. | `documentation/screenshots/responsive/tablet-funnel-768.png` |
+| Continue with incomplete data | GrowthScope allows partial data entry and shows unavailable metrics clearly. | `documentation/screenshots/functional/insufficient-data-pass.png` |
+| Receive warnings for inconsistent data | The Review step displays a warning when clicks are higher than impressions. | `documentation/screenshots/functional/inconsistent-data-warning.png` |
+| Calculate marketing KPIs automatically | Results calculate CTR, CPC, CPL, Lead to MQL, CAC and ROAS. | `documentation/screenshots/functional/calculation-results-pass.png` |
+| Identify areas to investigate | GrowthScope highlights multiple funnel issues when relevant. | `documentation/screenshots/functional/multiple-insights-pass.png` |
+| Receive tool-relevant recommendations | Investigation guidance changes based on the tools selected by the user. | `documentation/screenshots/functional/multiple-insights-pass.png` |
+| Receive guidance appropriate to experience level | Beginner mode displays additional explanations and guidance. | `documentation/screenshots/responsive/tablet-setup-768.png` |
+
+![GrowthScope beginner and tool guidance](documentation/screenshots/responsive/tablet-funnel-768.png)
+
+![GrowthScope personalised diagnostic results](documentation/screenshots/functional/multiple-insights-pass.png)
+
 ## Planned Features
 
 - Guided funnel setup
