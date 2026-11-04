@@ -206,6 +206,8 @@ GrowthScope was tested in both Google Chrome and Safari.
 - Back navigation worked.
 - Images and responsive layouts displayed correctly.
 
+![GrowthScope tested successfully in Google Chrome](screenshots/browser/chrome-browser-test.png)
+
 ### Safari
 
 - Homepage loaded correctly.
@@ -213,6 +215,8 @@ GrowthScope was tested in both Google Chrome and Safari.
 - Form controls and navigation behaved correctly.
 - Results displayed without layout issues.
 - Images loaded correctly.
+
+![GrowthScope tested successfully in Safari](screenshots/browser/safari-browser-test.png)
 
 No browser-specific blocking issues were identified.
 
