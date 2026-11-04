@@ -986,11 +986,23 @@ legend {
     font-weight: 500;
 }
 
+.insight-section + .insight-section {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #ddd6fe;
+}
+
 .insight-section + .insight-section ul {
     grid-template-columns: repeat(
         auto-fit,
         minmax(220px, 1fr)
     );
+}
+
+.insight-section > strong {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 1rem;
 }
 
 .context-card {
