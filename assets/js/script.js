@@ -837,7 +837,7 @@ analyseFunnelButton.addEventListener("click", function () {
             value: `${ctr.toFixed(1)}%`,
             message: ctrInsight,
             action: ctrAction
-        });;
+        });
     }
 
 
