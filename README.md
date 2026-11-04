@@ -157,6 +157,28 @@ The interface was also planned for tablet and mobile devices. On smaller screens
 
 GrowthScope was developed iteratively, with functionality added and tested in stages rather than building the full application at once.
 
+## Testing
+
+GrowthScope was tested throughout development for functionality, validation, responsiveness, accessibility and browser compatibility.
+
+Testing included:
+
+- HTML validation using the Nu HTML Checker;
+- CSS validation using the W3C CSS Validator;
+- JavaScript checking using JSHint;
+- manual functional testing of the full Setup → Funnel Data → Review → Results journey;
+- validation of empty and inconsistent funnel data;
+- calculation testing for CTR, CPC, CPL, Lead to MQL conversion rate, CAC and ROAS;
+- testing of personalised diagnostic insights and insufficient-data states;
+- responsive testing at desktop, tablet and mobile widths;
+- keyboard navigation and visible focus-state testing;
+- Lighthouse accessibility testing; and
+- cross-browser testing in Chrome and Safari.
+
+All final validation checks passed, and the deployed application achieved a Lighthouse accessibility score of 100.
+
+Full test procedures, results, screenshots and debugging evidence are documented in [`documentation/testing.md`](documentation/testing.md).
+
 ### Planning and design
 
 The project began with planning the user journey, required funnel metrics and the level of guidance needed for different users. Desktop, tablet and mobile wireframes were created in Figma before development.
